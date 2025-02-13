@@ -34,7 +34,7 @@ export default function Navbar() {
   return (
     <nav 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-[#201c1c] shadow-lg' : 'bg-transparent'
+        scrolled ? 'bg-[#1A1A1A] shadow-lg' : 'bg-transparent'
       }`}
     >
       <div className="container mx-auto px-4">
