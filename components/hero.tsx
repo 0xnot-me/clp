@@ -1,5 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
+import Navbar from "./navbar"
 
 export default function Hero() {
   return (
@@ -16,6 +17,8 @@ export default function Hero() {
       <div className="absolute inset-0 bg-black/30" />
 
       {/* Navigation */}
+      <Navbar />
+      
       <div className="relative z-10 flex items-center justify-between p-6">
         <div className="w-40">
           <Image src="/logo.png" alt="Logo" width={160} height={60} className="h-auto w-full" />
