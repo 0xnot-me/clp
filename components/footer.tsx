@@ -12,6 +12,9 @@ export default function Footer() {
           height={64}
           className=""
         />
+        <p className="text-white/80 text-lg font-medium">
+          Book Your Dream Vacation Today
+        </p>
         <div className="flex gap-6">
           <Link href="https://facebook.com" className="text-white/80 hover:text-white">
             <FacebookIcon className="w-6 h-6" />

@@ -7,7 +7,7 @@ export default function Hero() {
     <div className="relative h-screen w-full overflow-hidden">
       {/* Video background */}
       <iframe
-        src="https://player.vimeo.com/video/358145420?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1"
+        src="https://player.vimeo.com/video/358145420?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1&preload=auto"
         className="absolute top-1/2 left-1/2 h-[120%] w-[120%] -translate-x-1/2 -translate-y-1/2 object-cover"
         allow="autoplay; fullscreen"
         frameBorder="0"
