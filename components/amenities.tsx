@@ -11,7 +11,7 @@ export default function Amenities() {
     "2 pools",
     "2 full-size kitchens and 2 kitchenettes",
     "In town, walking distance to restaurants and shops",
-    "Certified beach clean, lifeguard, 24 hr security, closed at night to the public",
+    "Certified beach: clean, lifeguard, 24 hr security, closed at night to the public",
     "House man, 2 maids and concierge",
     "2 oversized apartments",
     "2 car parking",

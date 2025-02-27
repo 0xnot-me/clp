@@ -32,12 +32,12 @@ export default function Hero() {
         onClick={() => {
           document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' });
         }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 text-white flex flex-col items-center gap-2 cursor-pointer animate-bounce hover:text-gray-200 transition-colors"
+        className="absolute bottom-8 left-[48%] -translate-x-1/2 z-10 text-white flex flex-col items-center justify-center gap-2 cursor-pointer animate-bounce hover:text-gray-200 transition-colors text-center"
       >
         <span className="text-lg font-medium">Learn More</span>
         <svg 
           xmlns="http://www.w3.org/2000/svg" 
-          className="h-6 w-6" 
+          className="h-6 w-6 mx-auto" 
           fill="none" 
           viewBox="0 0 24 24" 
           stroke="currentColor"
