@@ -35,10 +35,9 @@ export default function GalleryPage() {
     <main>
       <Navbar />
       <PageHeader title="Gallery" />
-      <div className="pt-24 min-h-screen">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold mb-8">Gallery</h1>
-          
+      <div className="pt-2 min-h-screen">
+        <div className="container mx-auto px-4 py-8">
+         
           <div className="prose max-w-none mb-12">
             <p className="text-lg leading-relaxed">
               Casa La Playa is a 20,000 square foot luxury villa located in the heart of Puerto Vallarta, Mexico. 

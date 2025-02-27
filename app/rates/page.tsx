@@ -7,24 +7,119 @@ export default function RatesPage() {
     <main>
       <Navbar />
       <PageHeader title="Rates & Availability" />
-      <div className="pt-24 min-h-screen">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold mb-8">Rates & Availability</h1>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="border rounded-lg p-6">
-              <h2 className="text-2xl font-bold mb-4">6 Bedrooms</h2>
-              <p className="text-gray-600 mb-2">(up to 12 guests)</p>
-              <p className="text-lg font-semibold">Starting from $1,000/night</p>
+      <div className="min-h-[calc(100vh-400px)]">
+        <div className="container mx-auto px-4 py-8 lg:py-16">
+          <div className="grid md:grid-cols-3 gap-12">
+            <div className="md:col-span-2">
+              <div className="prose max-w-none">
+                <p className="text-lg italic mb-8">
+                  All rates include private access to Casa La Playa's luxury amenities and the villa's full-service staff to best accommodate you during your stay.
+                </p>
+
+                <h2 className="text-2xl font-bold mb-4">Nightly Rates ($USD)</h2>
+                <div className="overflow-x-auto mb-8">
+                  <table className="w-full border-collapse">
+                    <thead>
+                      <tr className="border-b">
+                        <th className="text-left py-3 px-4">Dates</th>
+                        <th className="text-left py-3 px-4">6 Bedroom</th>
+                        <th className="text-left py-3 px-4">7 Bedroom</th>
+                        <th className="text-left py-3 px-4">8 Bedroom</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr className="border-b">
+                        <td className="py-3 px-4">May 1-Sept. 30</td>
+                        <td className="py-3 px-4">$3200</td>
+                        <td className="py-3 px-4">$4000</td>
+                        <td className="py-3 px-4">$5000</td>
+                      </tr>
+                      <tr className="border-b">
+                        <td className="py-3 px-4">Oct. 1-Apr. 30</td>
+                        <td className="py-3 px-4">$3200</td>
+                        <td className="py-3 px-4">$4000</td>
+                        <td className="py-3 px-4">$5000</td>
+                      </tr>
+                      <tr className="border-b">
+                        <td className="py-3 px-4">Christmas Week</td>
+                        <td className="py-3 px-4">N/A</td>
+                        <td className="py-3 px-4">N/A</td>
+                        <td className="py-3 px-4">$7000</td>
+                      </tr>
+                      <tr className="border-b">
+                        <td className="py-3 px-4">Easter Week</td>
+                        <td className="py-3 px-4">N/A</td>
+                        <td className="py-3 px-4">N/A</td>
+                        <td className="py-3 px-4">$5500</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <p className="text-sm italic mb-8">
+                  Note: Until confirmed, rates are subject to change without notice. The villa accommodates 16 guests maximum. The above rates include a full housekeeping staff and chef. Restrictions may apply. All rates are subject to Mexican Federal Tax and Local Hotel Tax.
+                </p>
+
+                <div className="prose max-w-none mb-8">
+                  <p className="text-lg leading-relaxed">
+                    Thank you for considering beautiful Casa La Playa for your next vacation or special event. Located near the heart of downtown Puerto Vallarta, this unforgettable villa will quickly become home during your stay in Puerto Vallarta, Mexico. To complete the relaxing and luxurious experience, the villa's full-wait staff will always be available at your service. This gorgeous Mexican villa and its friendly staff will surely become a memorable part of your dream vacation or wedding day. Come experience Casa La Playa and leave with a lifetime of unforgettable memories!
+                  </p>
+                </div>
+
+                <div className="mb-8">
+                  <h3 className="text-xl font-semibold mb-2">To reserve your private stay or book Casa La Playa for your next special event, contact our friendly staff at:</h3>
+                  <p className="text-gray-600">info@casalaplaya.com</p>
+                  <p className="text-gray-600">310-986-2299</p>
+                </div>
+              </div>
             </div>
-            <div className="border rounded-lg p-6">
-              <h2 className="text-2xl font-bold mb-4">7 Bedrooms</h2>
-              <p className="text-gray-600 mb-2">(12-14 guests)</p>
-              <p className="text-lg font-semibold">Starting from $1,200/night</p>
-            </div>
-            <div className="border rounded-lg p-6">
-              <h2 className="text-2xl font-bold mb-4">Full House</h2>
-              <p className="text-gray-600 mb-2">(16-18 guests)</p>
-              <p className="text-lg font-semibold">Starting from $1,500/night</p>
+
+            {/* Contact Form */}
+            <div className="bg-gray-100 p-6 rounded-lg h-fit">
+              <h3 className="text-2xl font-bold mb-6">Contact Us</h3>
+              <form className="space-y-4">
+                <div>
+                  <input
+                    type="text"
+                    placeholder="First Name"
+                    className="w-full px-4 py-2 border rounded"
+                  />
+                </div>
+                <div>
+                  <input
+                    type="text"
+                    placeholder="Last Name"
+                    className="w-full px-4 py-2 border rounded"
+                  />
+                </div>
+                <div>
+                  <input
+                    type="email"
+                    placeholder="Email"
+                    className="w-full px-4 py-2 border rounded"
+                  />
+                </div>
+                <div>
+                  <input
+                    type="tel"
+                    placeholder="Phone"
+                    className="w-full px-4 py-2 border rounded"
+                  />
+                </div>
+                <div>
+                  <textarea
+                    placeholder="Message: Dates and Reservation Details"
+                    rows={4}
+                    className="w-full px-4 py-2 border rounded"
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  className="w-full bg-black text-white py-3 rounded hover:bg-gray-800 transition-colors"
+                >
+                  INQUIRE
+                </button>
+              </form>
             </div>
           </div>
         </div>
