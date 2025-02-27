@@ -5,6 +5,11 @@ import Footer from "@/components/footer"
 import Image from "next/image"
 import PageHeader from "@/components/page-header"
 
+// add slideshow feature
+
+
+
+
 const galleryImages = [
   "/Penthouse-night-view.jpg",
   "/Penthouse-Master-Suite_3rd_floor1.jpg",
@@ -30,6 +35,24 @@ const galleryImages = [
 
 export default function GalleryPage() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null)
+  const [currentIndex, setCurrentIndex] = useState<number>(0)
+
+  const handleImageClick = (image: string) => {
+    setSelectedImage(image)
+    setCurrentIndex(galleryImages.indexOf(image))
+  }
+
+  const handlePrevious = (e: React.MouseEvent) => {
+    e.stopPropagation()
+    setCurrentIndex((prev) => (prev === 0 ? galleryImages.length - 1 : prev - 1))
+    setSelectedImage(galleryImages[currentIndex === 0 ? galleryImages.length - 1 : currentIndex - 1])
+  }
+
+  const handleNext = (e: React.MouseEvent) => {
+    e.stopPropagation()
+    setCurrentIndex((prev) => (prev === galleryImages.length - 1 ? 0 : prev + 1))
+    setSelectedImage(galleryImages[currentIndex === galleryImages.length - 1 ? 0 : currentIndex + 1])
+  }
 
   return (
     <main>
@@ -54,7 +77,7 @@ export default function GalleryPage() {
               <div 
                 key={index} 
                 className="aspect-[4/3] relative overflow-hidden rounded-lg cursor-pointer"
-                onClick={() => setSelectedImage(image)}
+                onClick={() => handleImageClick(image)}
               >
                 <Image
                   src={image}
@@ -73,11 +96,26 @@ export default function GalleryPage() {
       {selectedImage && (
         <div 
           className="fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center p-4"
-          onClick={() => setSelectedImage(null)}
+          onClick={() => {
+            setSelectedImage(null)
+            setCurrentIndex(0)
+          }}
           style={{
             animation: 'fadeIn 0.1s ease-out'
           }}
         >
+          <button
+            onClick={handlePrevious}
+            className="absolute left-4 top-1/2 -translate-y-1/2 text-white bg-black bg-opacity-50 rounded-full w-12 h-12 flex items-center justify-center hover:bg-opacity-75 transition-all duration-200"
+          >
+            ←
+          </button>
+          <button
+            onClick={handleNext}
+            className="absolute right-4 top-1/2 -translate-y-1/2 text-white bg-black bg-opacity-50 rounded-full w-12 h-12 flex items-center justify-center hover:bg-opacity-75 transition-all duration-200"
+          >
+            →
+          </button>
           <div 
             className="relative max-w-6xl max-h-[90vh] bg-white"
             style={{
