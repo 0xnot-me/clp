@@ -7,9 +7,9 @@ export default function AmenitiesPage() {
     <main>
       <Navbar />
       <PageHeader title="Amenities" />
-      <div className="pt-24 min-h-screen">
+      <div className="pt-1 min-h-screen">
         <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold mb-8">Our Amenities</h1>
+          
           <Amenities />
         </div>
       </div>

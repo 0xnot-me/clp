@@ -17,7 +17,7 @@ export default function AboutPage() {
                   <Image
                     src="/about.jpg"
                     alt="Casa La Playa Exterior"
-                    width={1800}
+                    width={2800}
                     height={600}
                     className="rounded-lg"
                   />
@@ -63,7 +63,7 @@ export default function AboutPage() {
                   <Image
                     src="/about1.jpg"
                     alt="Casa La Playa Interior"
-                    width={1800}
+                    width={2800}
                     height={600}
                     className="rounded-lg"
                   />

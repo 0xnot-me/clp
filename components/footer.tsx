@@ -12,7 +12,7 @@ export default function Footer() {
           height={64}
           className=""
         />
-        <p className="text-white/80 text-lg font-medium">
+        <p className="text-white/80 text-xl font-medium">
           Book Your Dream Vacation Today
         </p>
         <div className="flex gap-6">
