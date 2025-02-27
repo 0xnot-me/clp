@@ -19,13 +19,15 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-[#201c1c]/90 backdrop-blur-sm shadow-lg">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between py-4">
-          <Image 
-            src="/logo.png" 
-            alt="Logo" 
-            width={160} 
-            height={60} 
-            className="h-auto w-40"
-          />
+          <Link href="/">
+            <Image 
+              src="/logo.png" 
+              alt="Logo" 
+              width={160} 
+              height={60} 
+              className="h-auto w-40"
+            />
+          </Link>
           <ul className="flex items-center gap-8">
             {navItems.map((item) => (
               <li key={item.href}>
