@@ -37,8 +37,8 @@ export default function Features() {
             A superb study in elegant simplicity, A stunning villa + beachfront oasis located only blocks away from
             downtown Puerto Vallarta, Mexico
           </h1>
-          <Link href="#contact" className="inline-block bg-gray-900 text-white px-8 py-3 font-medium">
-            REQUEST MORE INFORMATION
+          <Link href="tel:+13109862299" className="inline-block bg-gray-900 text-white px-8 py-3 font-medium">
+            CALL US NOW
           </Link>
         </div>
 
