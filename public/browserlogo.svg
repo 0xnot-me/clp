@@ -1,0 +1,9 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 28" width="36" height="28">
+	<title>logoclp</title>
+	<defs>
+		<image  width="26" height="24" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAYCAMAAADTXB33AAAAAXNSR0IB2cksfwAAADNQTFRF////////////////////////////////////////////////////////////////////5RDoRwAAABF0Uk5TABBAz/9grzDvcN8gv1CAj58TqSB2AAAA+klEQVR4nHXR2ZKDIBAF0NsdUFCz/P9XzhgXZJ22KlaSCeEJOEB1XwjPQZTxunyZMlGoUyPXfK6RpbVovdTIpNDPwxY+6ZwWuXNe0idd6LfJOav4Tgy93bbVxG4cgifY+aA+GamsGRWE4Izvfg7iboLW0ZtosfZj2ddPsmriITkbyJ238CDeLd6mYU3GMejk29yOspnp5j3QJUcdpN0TRZJNNNFM8mBrJ6h2Iipgs/TBw9D9KL6VoyYzXLcUgqL1pWW6zFCRM0u6xczvaeiyRw+Pksv/oHaTlEolQ1z3d9RWKiSFSzPVrwQz2KNKGJy9fyF9cvhCj8SP8Qd+k28bVrfxEwAAAABJRU5ErkJggg=="/>
+	</defs>
+	<style>
+	</style>
+	<use id="img1" href="#img1" x="5" y="3"/>
+</svg>

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next/types";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Script from 'next/script';
@@ -12,27 +12,41 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   title: "Casa La Playa Puerto Vallarta Mexico Vacation Home Rental",
   description: "A superb study in elegant simplicity set on the beach in a tropical paradise. Enjoy near-perfect weather and breathtaking sunsets everyday.",
-  openGraph: {
-    title: "Casa La Playa Puerto Vallarta Mexico Vacation Home Rental",
-    description: "A superb study in elegant simplicity set on the beach in a tropical paradise. Enjoy near-perfect weather and breathtaking sunsets everyday.",
-    images: [
+  metadataBase: new URL('https://casalaplaya.com'), // Replace with your actual domain
+  icons: {
+    icon: [
+      { url: '/favicon.ico' },
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png' },
+    ],
+    other: [
       {
-        url: '/03.jpg', // Make sure this image exists in your public folder
-        width: 1200,
-        height: 630,
-        alt: 'Casa La Playa Puerto Vallarta',
+        rel: 'manifest',
+        url: '/site.webmanifest'
       }
     ],
-    locale: 'en_US',
-    type: 'website',
   },
-  twitter: {
-    card: 'summary_large_image',
-    title: "Casa La Playa Puerto Vallarta Mexico Vacation Home Rental",
-    description: "A superb study in elegant simplicity set on the beach in a tropical paradise. Enjoy near-perfect weather and breathtaking sunsets everyday.",
-    images: ['/03.jpg'],
+  manifest: '/site.webmanifest',
+  themeColor: '#1a1a1a',
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'default',
+    title: 'Casa La Playa'
   },
-};
+}
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#1a1a1a' },
+    { media: '(prefers-color-scheme: dark)', color: '#1a1a1a' }
+  ],
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+}
 
 export default function RootLayout({
   children,
@@ -41,6 +55,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png" />
+        <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <meta name="msapplication-TileColor" content="#1a1a1a" />
+        <meta name="theme-color" content="#1a1a1a" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </head>
       <body className={`${montserrat.variable} font-sans antialiased`}>
         {children}
         <Script id="livechat" strategy="lazyOnload">
