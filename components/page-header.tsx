@@ -12,7 +12,7 @@ export default function PageHeader({ title }: PageHeaderProps) {
         src="/footer-bg.jpg"
         alt="Header background"
         fill
-        className="object-cover"
+        className="object-cover object-left-top"
         priority
       />
       

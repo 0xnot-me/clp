@@ -6,17 +6,17 @@ import Navbar from "./navbar"
 
 export default function Hero() {
   return (
-    <div className="relative h-screen w-full overflow-hidden">
-      {/* Video background */}
-      <iframe
-        src="https://player.vimeo.com/video/358145420?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1&preload=auto"
-        className="absolute top-1/2 left-1/2 h-[120%] w-[120%] -translate-x-1/2 -translate-y-1/2 object-cover"
-        allow="autoplay; fullscreen"
-        frameBorder="0"
-      />
-
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black/30" />
+    <div className="relative h-screen w-full">
+      {/* Video background contained within hero section */}
+      <div className="absolute inset-0 overflow-hidden">
+        <iframe
+          src="https://player.vimeo.com/video/358145420?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1&preload=auto"
+          className="absolute top-1/2 left-1/2 md:h-[120%] md:w-[120%] h-auto w-auto min-w-[250%] min-h-[250%] md:min-w-full md:min-h-full object-cover transform -translate-x-1/2 -translate-y-1/2 md:scale-100 scale-[1.75]"
+          allow="autoplay; fullscreen"
+          frameBorder="0"
+        />
+        <div className="absolute inset-0 bg-black/30" />
+      </div>
 
       {/* Navigation */}
       <Navbar />
@@ -25,14 +25,13 @@ export default function Hero() {
         <div className="w-40">
           <Image src="/logo.png" alt="Logo" width={160} height={60} className="h-auto w-full" />
         </div>
-       
       </div>
 
       <div 
         onClick={() => {
           document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' });
         }}
-        className="absolute bottom-8 left-[48%] -translate-x-1/2 z-10 text-white flex flex-col items-center justify-center gap-2 cursor-pointer animate-bounce hover:text-gray-200 transition-colors text-center"
+        className="absolute bottom-8 md:left-[48%] left-[38%] -translate-x-1/2 z-10 text-white flex flex-col items-center justify-center gap-2 cursor-pointer animate-bounce hover:text-gray-200 transition-colors text-center"
       >
         <span className="text-lg font-medium">Learn More</span>
         <svg 

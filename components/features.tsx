@@ -25,7 +25,7 @@ export default function Features() {
       image: "/5.jpg",
     },  
     {
-      image: "/6.jpg",
+      image: "/gallery/full/casa-la-playa-puerto-vallarta-vacation-house-for-rent_0000s_0006_8.png",
     },  
   ]
 
