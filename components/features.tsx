@@ -38,7 +38,7 @@ export default function Features() {
             downtown Puerto Vallarta, Mexico
           </h1>
           <Link href="tel:+13109862299" className="inline-block bg-gray-900 text-white px-8 py-3 font-medium">
-            CALL US NOW
+            CALL US NOW!
           </Link>
         </div>
 
