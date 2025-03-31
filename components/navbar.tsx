@@ -21,7 +21,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between py-4">
           <Link href="/">
             <Image 
-              src="/logo.png" 
+              src="/logoclp.svg" 
               alt="Logo" 
               width={160} 
               height={60} 
