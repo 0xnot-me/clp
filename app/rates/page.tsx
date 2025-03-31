@@ -1,6 +1,7 @@
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
 import PageHeader from "@/components/page-header"
+import ContactForm from "@/components/contact-form"
 
 export default function RatesPage() {
   return (
@@ -75,52 +76,7 @@ export default function RatesPage() {
             </div>
 
             {/* Contact Form */}
-            <div className="bg-gray-100 p-6 rounded-lg h-fit">
-              <h3 className="text-2xl font-bold mb-6">Contact Us</h3>
-              <form className="space-y-4">
-                <div>
-                  <input
-                    type="text"
-                    placeholder="First Name"
-                    className="w-full px-4 py-2 border rounded"
-                  />
-                </div>
-                <div>
-                  <input
-                    type="text"
-                    placeholder="Last Name"
-                    className="w-full px-4 py-2 border rounded"
-                  />
-                </div>
-                <div>
-                  <input
-                    type="email"
-                    placeholder="Email"
-                    className="w-full px-4 py-2 border rounded"
-                  />
-                </div>
-                <div>
-                  <input
-                    type="tel"
-                    placeholder="Phone"
-                    className="w-full px-4 py-2 border rounded"
-                  />
-                </div>
-                <div>
-                  <textarea
-                    placeholder="Message: Dates and Reservation Details"
-                    rows={4}
-                    className="w-full px-4 py-2 border rounded"
-                  ></textarea>
-                </div>
-                <button
-                  type="submit"
-                  className="w-full bg-black text-white py-3 rounded hover:bg-gray-800 transition-colors"
-                >
-                  INQUIRE
-                </button>
-              </form>
-            </div>
+            <ContactForm />
           </div>
         </div>
       </div>
