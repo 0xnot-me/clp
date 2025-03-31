@@ -44,7 +44,7 @@ export default function RentalOptions() {
                   />
                 </div>
                 <Link 
-                  href="#contact" 
+                  href="/contact" 
                   className="absolute bottom-0 left-0 right-0 bg-[#333333] text-white py-4 font-semibold tracking-[0.2em] text-sm uppercase text-center"
                 >
                   Request More Information
