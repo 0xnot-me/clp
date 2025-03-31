@@ -21,11 +21,7 @@ export default function Hero() {
       {/* Navigation */}
       <Navbar />
       
-      <div className="relative z-10 flex items-center justify-between p-6">
-        <div className="w-40">
-          <Image src="/logo.png" alt="Logo" width={160} height={60} className="h-auto w-full" />
-        </div>
-      </div>
+      
 
       <div 
         onClick={() => {
