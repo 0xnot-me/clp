@@ -52,10 +52,10 @@ export default function Navbar() {
             {/* Menu button for non-laptop screens */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="xl:hidden p-2 text-white hover:text-white/80"
+              className="xl:hidden h-[38px] w-[38px] flex border border-white bg-white text-black hover:bg-white/90 items-center justify-center"
             >
               <svg
-                className="h-6 w-6"
+                className="h-5 w-5"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -64,14 +64,14 @@ export default function Navbar() {
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    strokeWidth={2}
+                    strokeWidth={2.5}
                     d="M6 18L18 6M6 6l12 12"
                   />
                 ) : (
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    strokeWidth={2}
+                    strokeWidth={2.5}
                     d="M4 6h16M4 12h16M4 18h16"
                   />
                 )}
