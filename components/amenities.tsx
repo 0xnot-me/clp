@@ -11,14 +11,10 @@ export default function Amenities() {
     "2 pools",
     "2 full-size kitchens and 2 kitchenettes",
     "In town, walking distance to restaurants and shops",
-    "Certified beach: clean, lifeguard, 24 hr security, closed at night to the public",
     "House man, 2 maids and concierge",
-    "2 oversized apartments",
     "2 car parking",
     "Oceanfront glass walls",
-    "Vonage, Satellite TV, IPOD stations",
-    "Office across the street to service your needs",
-    "175 ft. of beachfront",
+    "Bilingual concierge across the street to service your needs",
     "Large garden",
   ]
 
@@ -30,7 +26,7 @@ export default function Amenities() {
             <TabsList className="w-full justify-start rounded-none border-0 bg-transparent p-0">
               <TabsTrigger 
                 value="amenities" 
-                className="text-lg border-b-2 border-transparent -mb-[2px] px-0 mr-12 rounded-none bg-transparent text-gray-500 data-[state=active]:border-black data-[state=active]:bg-transparent data-[state=active]:text-black hover:text-black transition-colors focus:outline-none focus-visible:outline-none"
+                className="!border-0 !border-b-2 text-lg border-transparent -mb-[2px] px-0 mr-12 !rounded-none !bg-transparent text-gray-500 data-[state=active]:!border-b-2 data-[state=active]:!border-black data-[state=active]:!bg-transparent data-[state=active]:text-black hover:text-black transition-colors focus:outline-none focus-visible:outline-none"
               >
                 Amenities
               </TabsTrigger>
