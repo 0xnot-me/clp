@@ -14,15 +14,15 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-3 gap-12">
             <div className="md:col-span-2">
               <div className="prose max-w-none">
-                <div className="flex gap-6 mb-6">
+                <div className="flex flex-col md:flex-row gap-6 mb-6">
                   <Image
                     src="/about.jpg"
                     alt="Casa La Playa Exterior"
                     width={2800}
                     height={600}
-                    className="rounded-lg"
+                    className="rounded-lg w-full md:w-1/2 h-auto object-cover"
                   />
-                  <div>
+                  <div className="w-full md:w-1/2">
                     <p className="text-lg leading-relaxed">
                       Your luxury vacation awaits you in Puerto Vallarta, Mexico. Come enjoy sandy beaches and 
                       vibrant Mexican culture during your private stay at Casa La Playa. This gorgeous Mexican villa is a 
@@ -51,8 +51,8 @@ export default function AboutPage() {
                   breathtaking views.
                 </p>
 
-                <div className="flex gap-6 mb-6">
-                  <div>
+                <div className="flex flex-col md:flex-row gap-6 mb-6">
+                  <div className="w-full md:w-1/2">
                     <p className="text-lg leading-relaxed">
                       The inside architecture and design of Casa La Playa closely rivals the beauty of the villa's 
                       gorgeous surroundings in Puerto Vallarta. Elegant contemporary architecture and an open 
@@ -66,7 +66,7 @@ export default function AboutPage() {
                     alt="Casa La Playa Interior"
                     width={2800}
                     height={600}
-                    className="rounded-lg"
+                    className="rounded-lg w-full md:w-1/2 h-auto object-cover"
                   />
                 </div>
 

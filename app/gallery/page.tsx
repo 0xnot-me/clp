@@ -153,12 +153,12 @@ export default function GalleryPage() {
           </div>
 
           {/* Tabs */}
-          <div className="flex justify-center space-x-4 mb-8">
+          <div className="flex flex-col md:flex-row justify-center md:space-x-4 space-y-2 md:space-y-0 mb-8 px-4">
             {tabs.map((tab) => (
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id as TabType)}
-                className={`px-6 py-3 text-lg font-semibold rounded-lg transition-colors
+                className={`px-6 py-4 md:py-3 text-lg font-semibold rounded-lg transition-colors w-full md:w-auto
                   ${activeTab === tab.id 
                     ? 'bg-black text-white' 
                     : 'bg-gray-100 text-gray-600 hover:bg-gray-200'

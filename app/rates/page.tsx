@@ -18,7 +18,9 @@ export default function RatesPage() {
                 </p>
 
                 <h2 className="text-2xl font-bold mb-4">Nightly Rates ($USD)</h2>
-                <div className="overflow-x-auto mb-8">
+                
+                {/* Desktop Table */}
+                <div className="hidden md:block">
                   <table className="w-full border-collapse">
                     <thead>
                       <tr className="border-b">
@@ -57,7 +59,35 @@ export default function RatesPage() {
                   </table>
                 </div>
 
-                <p className="text-sm italic mb-8">
+                {/* Mobile Cards */}
+                <div className="md:hidden space-y-6">
+                  {[
+                    { period: "May 1-Sept. 30", six: "$3200", seven: "$4000", eight: "$5000" },
+                    { period: "Oct. 1-Apr. 30", six: "$3200", seven: "$4000", eight: "$5000" },
+                    { period: "Christmas Week", six: "N/A", seven: "N/A", eight: "$7000" },
+                    { period: "Easter Week", six: "N/A", seven: "N/A", eight: "$5500" }
+                  ].map((rate, index) => (
+                    <div key={index} className="bg-gray-50 rounded-lg p-4 shadow-sm">
+                      <div className="font-semibold text-lg mb-3">{rate.period}</div>
+                      <div className="space-y-2">
+                        <div className="flex justify-between">
+                          <span className="text-gray-600">6 Bedroom:</span>
+                          <span className="font-medium">{rate.six}</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span className="text-gray-600">7 Bedroom:</span>
+                          <span className="font-medium">{rate.seven}</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span className="text-gray-600">8 Bedroom:</span>
+                          <span className="font-medium">{rate.eight}</span>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                <p className="text-gray-600 text-sm mt-4">
                   Note: Until confirmed, rates are subject to change without notice. The villa accommodates 16 guests maximum. The above rates include a full housekeeping staff and chef. Restrictions may apply. All rates are subject to Mexican Federal Tax and Local Hotel Tax.
                 </p>
 

@@ -21,15 +21,15 @@ export default function DiningPage() {
                   <li className="text-lg italic">* Food and Beverages are guest's responsibility.</li>
                 </ul>
 
-                <div className="flex gap-6 mb-6">
+                <div className="flex flex-col md:flex-row gap-6 mb-6">
                   <Image
                     src="/dining.jpg"
                     alt="Delicious Mexican Cuisine"
                     width={600}
                     height={400}
-                    className="rounded-lg"
+                    className="rounded-lg w-full md:w-1/2 h-auto object-cover"
                   />
-                  <div>
+                  <div className="w-full md:w-1/2">
                     <p className="text-lg leading-relaxed">
                       With two talented chefs on staff and its dreamy location, Casa La Playa offers an 
                       <span className="font-semibold"> unforgettable oceanfront dining experience</span> that will surely enhance your stay. 
