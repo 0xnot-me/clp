@@ -28,14 +28,14 @@ export default function Navbar() {
               alt="Logo" 
               width={160} 
               height={60} 
-              className="h-auto w-32 lg:w-40"
+              className="h-auto w-32 xl:w-40"
             />
           </Link>
 
-          {/* Mobile/iPad menu button */}
+          {/* Menu button for non-laptop screens */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden p-2 text-white hover:text-white/80"
+            className="xl:hidden p-2 text-white hover:text-white/80"
           >
             <svg
               className="h-6 w-6"
@@ -62,7 +62,7 @@ export default function Navbar() {
           </button>
 
           {/* Desktop Navigation */}
-          <ul className="hidden lg:flex items-center gap-8">
+          <ul className="hidden xl:flex items-center gap-8">
             {navItems.map((item) => (
               <li key={item.href}>
                 <Link 
@@ -78,7 +78,7 @@ export default function Navbar() {
           {/* Desktop Phone Button */}
           <Link
             href="tel:310-986-2299"
-            className="hidden lg:flex border border-white bg-white px-6 py-2 text-sm font-medium text-black tracking-wider hover:bg-white items-center gap-2"
+            className="hidden xl:flex border border-white bg-white px-6 py-2 text-sm font-medium text-black tracking-wider hover:bg-white items-center gap-2"
           >
             <svg 
               xmlns="http://www.w3.org/2000/svg" 
@@ -92,8 +92,8 @@ export default function Navbar() {
           </Link>
         </div>
 
-        {/* Mobile/iPad Navigation */}
-        <div className={`lg:hidden ${isMenuOpen ? 'block' : 'hidden'}`}>
+        {/* Mobile Navigation Menu */}
+        <div className={`xl:hidden ${isMenuOpen ? 'block' : 'hidden'}`}>
           <div className="px-2 pt-2 pb-3 space-y-1">
             {navItems.map((item) => (
               <Link
