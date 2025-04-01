@@ -16,7 +16,7 @@ export default function AboutPage() {
               <div className="prose max-w-none">
                 <div className="flex flex-col md:flex-row gap-6 mb-6">
                   <Image
-                    src="/about.jpg"
+                    src="/gallery/full/casa-la-playa-puerto-vallarta-vacation-house-for-rent_0000s_0007_9.png"
                     alt="Casa La Playa Exterior"
                     width={2800}
                     height={600}
@@ -62,7 +62,7 @@ export default function AboutPage() {
                     </p>
                   </div>
                   <Image
-                    src="/about1.jpg"
+                    src="/gallery/full/casa-la-playa-puerto-vallarta-vacation-house-for-rent_0000s_0005_7.png"
                     alt="Casa La Playa Interior"
                     width={2800}
                     height={600}
