@@ -143,12 +143,7 @@ export default function GalleryPage() {
         <div className="container mx-auto px-4 py-8">
           <div className="prose max-w-none mb-12">
             <p className="text-lg leading-relaxed">
-              Casa La Playa is a 20,000 square foot luxury villa located in the heart of Puerto Vallarta, Mexico. 
-              This property is available for countless private bookings, vacations, honeymoons, weddings, other events, and much more. 
-              The villa's unique architecture and layout includes a penthouse, 2 living areas and dining areas, 2 kitchens and kitchenettes, 
-              8 bedroom suites, 8 bathrooms, 3 half baths, swimming pools and reflecting pools, a plunge pool, and beautiful gardens on every floor. 
-              This floorplan allows guests plenty of space for both entertaining and relaxing. The gallery below showcases the beautiful 
-              architecture and design of this one-of-a-kind Puerto Vallarta getaway.
+            Available for vacations, honeymoons, weddings, and special events, the villa's unique design includes a penthouse, 2 living areas and dining areas, 2 kitchens, 8 bedroom suites, 8 bathrooms, 3 half baths, swimming pools and reflecting pools, a jacuzzi, and a plunge pool. Providing both the luxury of a 5-star resort and the privacy of a home, this floorplan allows guests plenty of space for both entertaining and relaxing.
             </p>
           </div>
 

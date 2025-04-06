@@ -90,8 +90,19 @@ export default function RatesPage() {
                 <p className="text-gray-600 text-sm mt-4">
                   Note: Until confirmed, rates are subject to change without notice. The villa accommodates 16 guests maximum. The above rates include a full housekeeping staff and chef. Restrictions may apply. All rates are subject to Mexican Federal Tax and Local Hotel Tax.
                 </p>
+                
+                <div className="space-y-1 mt-2 text-gray-600 text-sm font-bold">
+                  <p className="flex items-start">
+                    <span className="mr-2">-</span>
+                    <span>We only rent to ONE group at a time.</span>
+                  </p>
+                  <p className="flex items-start">
+                    <span className="mr-2">-</span>
+                    <span>Christmas and New Years require 8 bedroom booking with a 1 week minimum.</span>
+                  </p>
+                </div>
 
-                <div className="prose max-w-none mb-8">
+                <div className="prose max-w-none mb-8 pt-8">
                   <p className="text-lg leading-relaxed">
                     Thank you for considering beautiful Casa La Playa for your next vacation or special event. Located near the heart of downtown Puerto Vallarta, this unforgettable villa will quickly become home during your stay in Puerto Vallarta, Mexico. To complete the relaxing and luxurious experience, the villa's full-wait staff will always be available at your service. This gorgeous Mexican villa and its friendly staff will surely become a memorable part of your dream vacation or wedding day. Come experience Casa La Playa and leave with a lifetime of unforgettable memories!
                   </p>

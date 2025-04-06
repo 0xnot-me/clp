@@ -10,9 +10,7 @@ export default function LocationPage() {
         <div className="container mx-auto px-4 py-16">
         <div className="prose max-w-none mb-12">
             <p className="text-lg leading-relaxed">
-            Casa La Playa is approximately 15 to 20 minutes from the Puerto Vallarta's international airport.
-
-Casa La Playa is a private villa located on Playa Camarones, a beachfront paradise in the heart of the city of Puerto Vallarta, Mexico. Though secluded enough to allow total relaxation, the rental villa is also able to offer just a 10 minute commute to and from downtown. The villa is just a short excursion away from rushing rivers, mountainous jungle trails, and ocean outings. Casa La Playa is Puerto Vallarta's finest vacation rental and remote venue that offers its guests the perfect balance between a sanctuary and an adventure.
+            Casa La Playa sits on the beautiful beachfront of Playa Camarones, just 15-20 minutes from Puerto Vallarta International Airport. This exclusive villa perfectly balances elegant simplicity with tropical paradise living in the heart of Puerto Vallarta. While guests enjoy a secluded beachfront setting, the vibrant Malecon boardwalk is less than a 10-minute walk away, offering easy access to the city's finest restaurants, boutique shopping, and nightlife.
             </p>
           </div>
           <div className="aspect-[16/9] w-full mb-8">
