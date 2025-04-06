@@ -12,7 +12,26 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   title: "Casa La Playa Puerto Vallarta Mexico Vacation Home Rental",
   description: "A superb study in elegant simplicity set on the beach in a tropical paradise. Enjoy near-perfect weather and breathtaking sunsets everyday.",
-  metadataBase: new URL('https://casalaplaya.com'), // Replace with your actual domain
+  metadataBase: new URL('https://casalaplaya.com'),
+  openGraph: {
+    title: 'Casa La Playa Puerto Vallarta Mexico Vacation Home Rental',
+    description: 'A superb study in elegant simplicity set on the beach in a tropical paradise. Enjoy near-perfect weather and breathtaking sunsets everyday.',
+    url: 'https://casalaplaya.com',
+    siteName: 'Casa La Playa',
+    locale: 'en_US',
+    type: 'website',
+  },
+  alternates: {
+    canonical: 'https://casalaplaya.com'
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
   icons: {
     icon: [
       { url: '/favicon.ico' },
