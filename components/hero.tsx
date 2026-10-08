@@ -2,9 +2,25 @@
 
 import { useEffect, useRef } from "react"
 import Link from "next/link"
-import Image from "next/image"
 import Navbar from "./navbar"
 import { rentalOptions, usd } from "@/lib/site"
+
+function armVideo(video: HTMLVideoElement) {
+  video.defaultMuted = true
+  video.muted = true
+  video.playsInline = true
+  video.setAttribute("muted", "")
+  video.setAttribute("playsinline", "true")
+  video.setAttribute("webkit-playsinline", "true")
+  const play = () => {
+    video.muted = true
+    void video.play().catch(() => {})
+  }
+  play()
+  video.addEventListener("loadedmetadata", play)
+  video.addEventListener("loadeddata", play)
+  video.addEventListener("canplay", play)
+}
 
 export default function Hero() {
   const videoRef = useRef<HTMLVideoElement>(null)
@@ -12,53 +28,43 @@ export default function Hero() {
   useEffect(() => {
     const video = videoRef.current
     if (!video) return
-    video.muted = true
-    video.defaultMuted = true
-    video.playsInline = true
+    armVideo(video)
     const play = () => {
+      video.muted = true
       void video.play().catch(() => {})
     }
-    play()
-    video.addEventListener("loadeddata", play)
-    video.addEventListener("canplay", play)
-    document.addEventListener("touchstart", play, { once: true })
+    const kick = () => play()
+    window.addEventListener("touchstart", kick, { passive: true })
+    window.addEventListener("scroll", kick, { passive: true })
+    document.addEventListener("click", kick)
+    const onVisible = () => {
+      if (document.visibilityState === "visible") play()
+    }
+    document.addEventListener("visibilitychange", onVisible)
     return () => {
-      video.removeEventListener("loadeddata", play)
-      video.removeEventListener("canplay", play)
+      window.removeEventListener("touchstart", kick)
+      window.removeEventListener("scroll", kick)
+      document.removeEventListener("click", kick)
+      document.removeEventListener("visibilitychange", onVisible)
     }
   }, [])
 
   return (
     <div className="relative h-screen w-full">
       <div className="absolute inset-0 overflow-hidden bg-black">
-        <Image
-          src="/hero-poster.jpg"
-          alt=""
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover object-center"
-          aria-hidden="true"
-        />
         <video
           ref={videoRef}
-          className="absolute inset-0 h-full w-full object-cover md:hidden"
+          className="absolute inset-0 h-full w-full object-cover"
+          src="/hero-flyover.mp4"
+          poster="/hero-poster.jpg"
           autoPlay
           muted
           loop
           playsInline
           preload="auto"
-          poster="/hero-poster.jpg"
-        >
-          <source src="/hero.mp4" type="video/mp4" />
-        </video>
-        <iframe
-          src="https://player.vimeo.com/video/358145420?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1&playsinline=1"
-          className="hidden md:block absolute top-1/2 left-1/2 h-[120%] w-[120%] -translate-x-1/2 -translate-y-1/2"
-          allow="autoplay; fullscreen; picture-in-picture; encrypted-media"
-          referrerPolicy="strict-origin-when-cross-origin"
-          title="Video tour of Casa La Playa beachfront villa in Puerto Vallarta"
-          frameBorder="0"
+          controls={false}
+          disablePictureInPicture
+          disableRemotePlayback
         />
         <div className="absolute inset-0 bg-black/30" />
       </div>
