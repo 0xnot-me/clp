@@ -5,7 +5,7 @@ import Link from "next/link"
 import Navbar from "./navbar"
 import { rentalOptions, usd } from "@/lib/site"
 
-const HERO_VIDEO_HTML = `<video autoplay muted loop playsinline webkit-playsinline preload="auto" poster="/hero-poster.jpg" src="/hero-tour.mp4" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></video>`
+const MOBILE_VIDEO_HTML = `<video class="absolute inset-0 h-full w-full object-cover md:hidden" autoplay muted loop playsinline webkit-playsinline preload="auto" poster="/hero-poster.jpg" src="/hero-tour.mp4"></video>`
 
 export default function Hero() {
   const boxRef = useRef<HTMLDivElement>(null)
@@ -37,8 +37,16 @@ export default function Hero() {
       <div className="absolute inset-0 overflow-hidden bg-black">
         <div
           ref={boxRef}
-          className="absolute inset-0"
-          dangerouslySetInnerHTML={{ __html: HERO_VIDEO_HTML }}
+          className="absolute inset-0 md:hidden"
+          dangerouslySetInnerHTML={{ __html: MOBILE_VIDEO_HTML }}
+        />
+        <iframe
+          src="https://player.vimeo.com/video/358145420?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1&playsinline=1"
+          className="hidden md:block absolute top-1/2 left-1/2 h-[120%] w-[120%] -translate-x-1/2 -translate-y-1/2"
+          allow="autoplay; fullscreen; picture-in-picture; encrypted-media"
+          referrerPolicy="strict-origin-when-cross-origin"
+          title="Video tour of Casa La Playa beachfront villa in Puerto Vallarta"
+          frameBorder="0"
         />
       </div>
 
