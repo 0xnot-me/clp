@@ -1,6 +1,7 @@
 import Hero from "@/components/hero"
 import Features from "@/components/features"
 import LocationHighlight from "@/components/location-highlight"
+import VibeReel from "@/components/vibe-reel"
 import RentalOptions from "@/components/rental-options"
 import Amenities from "@/components/amenities"
 import Footer from "@/components/footer"
@@ -21,6 +22,7 @@ export default function Home() {
       <Hero />
       <Features />
       <LocationHighlight />
+      <VibeReel />
       <RentalOptions />
       <Amenities />
       <Footer />
