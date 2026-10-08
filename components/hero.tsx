@@ -5,7 +5,7 @@ import Link from "next/link"
 import Navbar from "./navbar"
 import { rentalOptions, usd } from "@/lib/site"
 
-const HERO_VIDEO_HTML = `<video autoplay muted loop playsinline webkit-playsinline preload="auto" poster="/hero-poster.jpg" src="/hero-loop.mp4" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></video>`
+const HERO_VIDEO_HTML = `<video autoplay muted loop playsinline webkit-playsinline preload="auto" poster="/hero-poster.jpg" src="/hero-tour.mp4" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></video>`
 
 export default function Hero() {
   const boxRef = useRef<HTMLDivElement>(null)
@@ -40,7 +40,6 @@ export default function Hero() {
           className="absolute inset-0"
           dangerouslySetInnerHTML={{ __html: HERO_VIDEO_HTML }}
         />
-        <div className="absolute inset-0 bg-black/30" />
       </div>
 
       <Navbar />
