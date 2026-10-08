@@ -1,5 +1,5 @@
 "use client"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Image from "next/image"
 
 type TabType = 'fullHouse' | 'sixBedroom' | 'sevenBedroom'
@@ -96,23 +96,41 @@ export default function GalleryGrid() {
   const [currentIndex, setCurrentIndex] = useState<number>(0)
   const [activeTab, setActiveTab] = useState<TabType>('fullHouse')
 
+  const images = galleryImages[activeTab]
+
+  const goTo = (index: number) => {
+    const next = (index + images.length) % images.length
+    setCurrentIndex(next)
+    setSelectedImage(images[next])
+  }
+
+  useEffect(() => {
+    if (!selectedImage) return
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "ArrowLeft") goTo(currentIndex - 1)
+      if (e.key === "ArrowRight") goTo(currentIndex + 1)
+      if (e.key === "Escape") {
+        setSelectedImage(null)
+        setCurrentIndex(0)
+      }
+    }
+    window.addEventListener("keydown", onKey)
+    return () => window.removeEventListener("keydown", onKey)
+  }, [selectedImage, currentIndex, images])
+
   const handleImageClick = (image: string) => {
     setSelectedImage(image)
-    setCurrentIndex(galleryImages[activeTab].indexOf(image))
+    setCurrentIndex(images.indexOf(image))
   }
 
   const handlePrevious = (e: React.MouseEvent) => {
     e.stopPropagation()
-    const images = galleryImages[activeTab]
-    setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1))
-    setSelectedImage(images[currentIndex === 0 ? images.length - 1 : currentIndex - 1])
+    goTo(currentIndex - 1)
   }
 
   const handleNext = (e: React.MouseEvent) => {
     e.stopPropagation()
-    const images = galleryImages[activeTab]
-    setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1))
-    setSelectedImage(images[currentIndex === images.length - 1 ? 0 : currentIndex + 1])
+    goTo(currentIndex + 1)
   }
 
   return (
@@ -166,29 +184,34 @@ export default function GalleryGrid() {
           }}
         >
           <button
+            type="button"
+            aria-label="Previous photo"
             onClick={handlePrevious}
-            className="absolute left-4 top-1/2 -translate-y-1/2 text-white bg-black bg-opacity-50 rounded-full w-12 h-12 flex items-center justify-center hover:bg-opacity-75 transition-all duration-200"
+            className="absolute left-4 top-1/2 z-[60] -translate-y-1/2 text-white bg-black/70 rounded-full w-12 h-12 flex items-center justify-center hover:bg-black transition-all duration-200"
           >
             ←
           </button>
           <button
+            type="button"
+            aria-label="Next photo"
             onClick={handleNext}
-            className="absolute right-4 top-1/2 -translate-y-1/2 text-white bg-black bg-opacity-50 rounded-full w-12 h-12 flex items-center justify-center hover:bg-opacity-75 transition-all duration-200"
+            className="absolute right-4 top-1/2 z-[60] -translate-y-1/2 text-white bg-black/70 rounded-full w-12 h-12 flex items-center justify-center hover:bg-black transition-all duration-200"
           >
             →
           </button>
           <div
-            className="relative flex items-center justify-center w-[96vw] h-[92vh]"
+            className="relative z-10 pointer-events-none flex items-center justify-center w-[96vw] h-[92vh]"
             style={{ animation: "scaleIn 0.1s ease-out" }}
-            onClick={(e) => e.stopPropagation()}
           >
             <img
               src={selectedImage}
               alt={`Casa La Playa Puerto Vallarta, enlarged photo ${currentIndex + 1}`}
-              className="rounded-2xl h-[92vh] w-auto max-w-[96vw] object-contain"
+              className="pointer-events-auto rounded-2xl h-[92vh] w-auto max-w-[96vw] object-contain"
             />
             <button
-              className="absolute top-4 right-4 text-white bg-black bg-opacity-50 rounded-full w-10 h-10 flex items-center justify-center hover:bg-opacity-75 transition-all duration-200"
+              type="button"
+              aria-label="Close photo"
+              className="pointer-events-auto absolute top-4 right-4 text-white bg-black/70 rounded-full w-10 h-10 flex items-center justify-center hover:bg-black transition-all duration-200"
               onClick={(e) => {
                 e.stopPropagation();
                 setSelectedImage(null);
