@@ -5,16 +5,20 @@ import Script from 'next/script'
 
 export default function Amenities() {
   const amenities = [
-    "8 beachfront bedrooms",
+    "8 beachfront bedrooms, sleeps 16",
+    "8 full bathrooms and 2 half baths",
     "20,000 sq. ft. modern villa",
+    "175 ft. of beachfront on Playa Camarones",
     "3-story plan with elevator",
-    "2 pools",
+    "2 pools and a jacuzzi",
     "2 full-size kitchens and 2 kitchenettes",
     "In town, walking distance to restaurants and shops",
-    "House man, 2 maids and concierge",
+    "Private chef for breakfast and lunch",
+    "2 maids and a night watchman",
+    "Bilingual concierge across the street to service your needs",
+    "Bartender available on request",
     "2 car parking",
     "Oceanfront glass walls",
-    "Bilingual concierge across the street to service your needs",
     "Large garden",
   ]
 

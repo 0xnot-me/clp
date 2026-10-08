@@ -2,12 +2,20 @@ import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
 import PageHeader from "@/components/page-header"
 import ContactForm from "@/components/contact-form"
+import { pageMetadata } from "@/lib/metadata"
+
+export const metadata = pageMetadata({
+  title: "Things to Do Near Casa La Playa | Puerto Vallarta Activities",
+  description:
+    "Sport fishing, whale watching, snorkeling, jungle tours, golf and more near Casa La Playa. Our concierge books excursions for guests across Banderas Bay.",
+  path: "/activities",
+})
 
 export default function ActivitiesPage() {
   return (
     <main>
       <Navbar />
-      <PageHeader title="Activities" />
+      <PageHeader title="Puerto Vallarta Activities" />
       <div className="min-h-[calc(100vh-400px)]">
         <div className="container mx-auto px-4 py-8 lg:py-16">
           <div className="grid md:grid-cols-3 gap-12">
@@ -46,7 +54,8 @@ export default function ActivitiesPage() {
                 </div>
 
                 <p className="text-lg mb-8">
-                  To get more information on these activities or to make reservations, visit{' '}
+                  Casa La Playa&apos;s bilingual concierge, whose office is across the street from the villa, can book
+                  excursions, boats and taxis for you before and during your stay. To read more about these activities, visit{' '}
                   <a href="https://vallarta-adventures.com" className="text-blue-600 hover:underline">
                     vallarta-adventures.com
                   </a>{' '}

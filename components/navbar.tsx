@@ -3,6 +3,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { useState } from "react"
+import { site } from "@/lib/site"
 
 const navItems = [
   { label: "About", href: "/about" },
@@ -12,6 +13,7 @@ const navItems = [
   { label: "Dining", href: "/dining" },
   { label: "Amenities", href: "/amenities" },
   { label: "Activities", href: "/activities" },
+  { label: "FAQ", href: "/faq" },
   { label: "Contact Us", href: "/contact" },
 ]
 
@@ -25,7 +27,7 @@ export default function Navbar() {
           <Link href="/">
             <Image 
               src="/logoclp.svg" 
-              alt="Logo" 
+              alt="Casa La Playa Puerto Vallarta home" 
               width={160} 
               height={60} 
               className="h-auto w-32 xl:w-40"
@@ -35,7 +37,7 @@ export default function Navbar() {
           <div className="flex items-center gap-3">
             {/* Always visible phone button */}
             <Link
-              href="tel:310-986-2299"
+              href={site.telHref}
               className="xl:hidden flex border border-white bg-white px-4 py-2 text-sm font-medium text-black tracking-wider hover:bg-white/90 items-center gap-2"
             >
               <svg 
@@ -95,7 +97,7 @@ export default function Navbar() {
 
           {/* Desktop Phone Button */}
           <Link
-            href="tel:310-986-2299"
+            href={site.telHref}
             className="hidden xl:flex border border-white bg-white px-6 py-2 text-sm font-medium text-black tracking-wider hover:bg-white items-center gap-2"
           >
             <svg 
@@ -124,7 +126,7 @@ export default function Navbar() {
               </Link>
             ))}
             <Link
-              href="tel:310-986-2299"
+              href={site.telHref}
               className="block px-3 py-2 text-white/80 hover:text-white text-base tracking-wider transition-colors flex items-center gap-2"
               onClick={() => setIsMenuOpen(false)}
             >

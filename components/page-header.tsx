@@ -10,7 +10,8 @@ export default function PageHeader({ title }: PageHeaderProps) {
       {/* Background Image */}
       <Image
         src="/footer-bg.jpg"
-        alt="Header background"
+        alt=""
+        sizes="100vw"
         fill
         className="object-cover object-left-top"
         priority
@@ -21,7 +22,7 @@ export default function PageHeader({ title }: PageHeaderProps) {
       
       {/* Content */}
       <div className="absolute inset-0 flex items-center justify-center">
-        <h1 className="text-6xl font-bold text-white">{title}</h1>
+        <h1 className="text-4xl md:text-6xl font-bold text-white text-center px-4">{title}</h1>
       </div>
      
     </div>

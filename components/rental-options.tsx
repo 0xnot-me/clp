@@ -7,16 +7,19 @@ export default function RentalOptions() {
       title: "6 Bedrooms",
       guests: "(up to 12 guests)",
       image: "/01.jpg",
+      alt: "Casa La Playa garden, pool and villa, 6-bedroom option",
     },
     {
       title: "7 Bedrooms",
-      guests: "(12-14 guests)",
+      guests: "(up to 14 guests)",
       image: "/02.jpg",
+      alt: "Sunset over Banderas Bay from Casa La Playa, 7-bedroom option",
     },
     {
-      title: "Full House",
-      guests: "(16-18 guests)",
+      title: "Full House: 8 Bedrooms",
+      guests: "(up to 16 guests)",
       image: "/03.jpg",
+      alt: "Casa La Playa full house, 8-bedroom beachfront villa in Puerto Vallarta",
     },
   ]
 
@@ -27,7 +30,11 @@ export default function RentalOptions() {
           Casa La Playa is a superb study in elegant simplicity set on the beach in a tropical paradise. Discover a world of barefoot sophistication while enjoying near-perfect weather and breathtaking sunsets everyday. The sophisticated architecture of this elegant estate serves to seamlessly connect indoor and outdoor living spaces. Enjoy private, unfettered beachfront views from every room and every floor of the stylish villa that is walking distance to Puerto Vallarta's most popular restaurants, shopping, and nightlife.
         </p>
 
-        <h2 className="text-5xl font-black text-center mb-12">Rental Options</h2>
+        <h2 className="text-5xl font-black text-center mb-4">Rental Options</h2>
+        <p className="text-center text-gray-600 mb-12">
+          We rent to one group at a time. Every option includes a private chef for breakfast and lunch, daily
+          housekeeping, a night watchman and concierge. <Link href="/rates" className="underline">See current rates</Link>.
+        </p>
 
         <div className="grid md:grid-cols-3 gap-8">
           {options.map((option, index) => (
@@ -37,8 +44,8 @@ export default function RentalOptions() {
               <div className="relative group">
                 <div className="aspect-[4/3] relative overflow-hidden">
                   <Image 
-                    src={option.image || "/placeholder.svg"} 
-                    alt={option.title} 
+                    src={option.image} 
+                    alt={option.alt} 
                     fill 
                     className="object-cover"
                   />

@@ -1,32 +1,58 @@
 import Image from "next/image"
 import Link from "next/link"
+import { site } from "@/lib/site"
+
+const footerLinks = [
+  { label: "About", href: "/about" },
+  { label: "Location", href: "/location" },
+  { label: "Gallery", href: "/gallery" },
+  { label: "Rates", href: "/rates" },
+  { label: "Dining", href: "/dining" },
+  { label: "Sample Menu", href: "/sample-menu" },
+  { label: "Amenities", href: "/amenities" },
+  { label: "Activities", href: "/activities" },
+  { label: "FAQ", href: "/faq" },
+  { label: "Contact", href: "/contact" },
+]
 
 export default function Footer() {
   return (
-    <footer className="bg-[#1A1A1A] py-4">
-      <div className="container mx-auto px-4 flex justify-between items-center">
-        <Image 
-          src="/logo.png" 
-          alt="Casa La Playa"
-          width={160}
-          height={64}
-          className=""
-        />
-        <p className="text-white/80 text-xl font-medium">
-          Book Your Dream Vacation Today
-        </p>
-        <div className="flex gap-6">
-          <Link href="https://facebook.com" className="text-white/80 hover:text-white">
-            <FacebookIcon className="w-6 h-6" />
-          </Link>
-          <Link href="https://youtube.com" className="text-white/80 hover:text-white">
-            <YoutubeIcon className="w-6 h-6" />
-          </Link>
-          <Link href="https://instagram.com" className="text-white/80 hover:text-white">
-            <InstagramIcon className="w-6 h-6" />
-          </Link>
+    <footer className="bg-[#1A1A1A] py-8 text-white/80">
+      <div className="container mx-auto px-4 grid gap-8 md:grid-cols-3 items-start">
+        <div className="space-y-3">
+          <Image 
+            src="/logo.png" 
+            alt="Casa La Playa Puerto Vallarta"
+            width={160}
+            height={64}
+          />
+          <p className="text-sm">
+            8-bedroom beachfront villa on {site.beach}, {site.address.neighborhood}, {site.address.city}, {site.address.region}, Mexico
+          </p>
+        </div>
+        <nav aria-label="Footer">
+          <ul className="grid grid-cols-2 gap-x-6 gap-y-2 text-sm">
+            {footerLinks.map((item) => (
+              <li key={item.href}>
+                <Link href={item.href} className="hover:text-white">{item.label}</Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+        <div className="space-y-2 text-sm">
+          <p className="text-xl font-medium text-white">Book Your Dream Vacation Today</p>
+          <p><a href={site.telHref} className="hover:text-white">{site.phoneDisplay}</a></p>
+          <p><a href={`mailto:${site.email}`} className="hover:text-white">{site.email}</a></p>
+          <div className="pt-2">
+            <a href={site.instagram} className="hover:text-white" aria-label="Casa La Playa on Instagram" target="_blank" rel="noopener">
+              <InstagramIcon className="w-6 h-6" />
+            </a>
+          </div>
         </div>
       </div>
+      <p className="container mx-auto px-4 mt-8 text-xs text-white/50">
+        © {new Date().getFullYear()} {site.brand}. All rights reserved.
+      </p>
     </footer>
   )
 }
@@ -34,18 +60,6 @@ export default function Footer() {
 interface IconProps {
   className?: string;
 }
-
-const FacebookIcon = ({ className }: IconProps) => (
-  <svg className={className} viewBox="0 0 24 24" fill="currentColor">
-    <path d="M9 8H6v4h3v12h5V12h3.642L18 8h-4V6.333C14 5.378 14.192 5 15.115 5H18V0h-3.808C10.596 0 9 1.583 9 4.615V8z"/>
-  </svg>
-)
-
-const YoutubeIcon = ({ className }: IconProps) => (
-  <svg className={className} viewBox="0 0 24 24" fill="currentColor">
-    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-  </svg>
-)
 
 const InstagramIcon = ({ className }: IconProps) => (
   <svg className={className} viewBox="0 0 24 24" fill="currentColor">

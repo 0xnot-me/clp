@@ -1,5 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
+import { site } from "@/lib/site"
 
 export default function Features() {
   const features = [
@@ -7,25 +8,31 @@ export default function Features() {
       title: "Discover Beauty",
       description: "Delight in natural elegance",
       image: "/1.jpg",
+      alt: "Aerial view of Casa La Playa's modern white villa, palm trees and pool on the beach in Puerto Vallarta",
     },
     {
       title: "Experience Pleasure",
       description: "Indulge in pure luxury",
       image: "/2.jpg",
+      alt: "Casa La Playa seen from the water on Playa Camarones beach, Puerto Vallarta",
     },
     {
       title: "Refresh the Spirit",
       description: "Retreat to a tropical oasis",
       image: "/3.jpg",
+      alt: "Casa La Playa pool, sun loungers and gardens overlooking Banderas Bay at dusk",
     },
     {
       image: "/gallery/full/casa-la-playa-puerto-vallarta-vacation-house-for-rent_0000s_0002_4.png",
+      alt: "Pool, jacuzzi and outdoor dining table beside the ocean at Casa La Playa",
     },  
     {
       image: "/5.jpg",
+      alt: "Oceanfront terrace and dining room with glass walls at Casa La Playa",
     },  
     {
       image: "/gallery/full/casa-la-playa-puerto-vallarta-vacation-house-for-rent_0000s_0006_8.png",
+      alt: "Beachfront dinner table set at night with the villa lit up behind it",
     },  
   ]
 
@@ -34,10 +41,13 @@ export default function Features() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 space-y-4">
           <h1 className="text-3xl md:text-4xl font-bold max-w-4xl mx-auto">
-            A superb study in elegant simplicity, A stunning villa + beachfront oasis located only blocks away from
-            downtown Puerto Vallarta, Mexico
+            Casa La Playa Puerto Vallarta: A Fully Staffed 8-Bedroom Beachfront Villa on Playa Camarones
           </h1>
-          <Link href="tel:+13109862299" className="inline-block bg-gray-900 text-white px-8 py-3 font-medium">
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            A superb study in elegant simplicity: 20,000 sq ft, 175 feet of beachfront, a private chef, and sleeping
+            for up to 16 guests, just blocks from downtown Puerto Vallarta and a 10-minute walk to the Malecón.
+          </p>
+          <Link href={site.telHref} className="inline-block bg-gray-900 text-white px-8 py-3 font-medium">
             CALL US NOW!
           </Link>
         </div>
@@ -54,7 +64,7 @@ export default function Features() {
               <div className="aspect-[4/3] relative overflow-hidden">
                 <Image 
                   src={feature.image} 
-                  alt={feature.title || "Gallery image"} 
+                  alt={feature.alt} 
                   fill 
                   className="object-cover" 
                 />

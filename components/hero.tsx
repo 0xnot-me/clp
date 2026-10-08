@@ -13,6 +13,7 @@ export default function Hero() {
           src="https://player.vimeo.com/video/358145420?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1&preload=auto"
           className="absolute top-1/2 left-1/2 md:h-[120%] md:w-[120%] h-auto w-auto min-w-[250%] min-h-[250%] md:min-w-full md:min-h-full object-cover transform -translate-x-1/2 -translate-y-1/2 md:scale-100 scale-[1.75]"
           allow="autoplay; fullscreen"
+          title="Video tour of Casa La Playa beachfront villa in Puerto Vallarta"
           frameBorder="0"
         />
         <div className="absolute inset-0 bg-black/30" />

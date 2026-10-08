@@ -3,12 +3,21 @@ import Footer from "@/components/footer"
 import PageHeader from "@/components/page-header"
 import Image from "next/image"
 import ContactForm from "@/components/contact-form"
+import Link from "next/link"
+import { pageMetadata } from "@/lib/metadata"
+
+export const metadata = pageMetadata({
+  title: "Private Chef & Dining at Casa La Playa Puerto Vallarta",
+  description:
+    "Breakfast and lunch from Casa La Playa's private chef are included. Dinner is available for a fee, the staff shop for groceries, and dietary needs are welcome.",
+  path: "/dining",
+})
 
 export default function DiningPage() {
   return (
     <main>
       <Navbar />
-      <PageHeader title="Dining" />
+      <PageHeader title="Private Chef & Dining" />
       <div className="min-h-screen">
         <div className="container mx-auto px-4 py-16">
           <div className="grid md:grid-cols-3 gap-12">
@@ -25,7 +34,7 @@ export default function DiningPage() {
                   <div className="float-left mr-6 mb-4 w-1/2">
                     <Image
                       src="/dining.jpg"
-                      alt="Delicious Mexican Cuisine"
+                      alt="Mexican dishes prepared by the private chef at Casa La Playa"
                       width={600}
                       height={400}
                       className="rounded-lg object-cover"
@@ -52,7 +61,7 @@ export default function DiningPage() {
                   <div className="float-right ml-6 mb-4 w-1/2">
                     <Image
                       src="/marg.png"
-                      alt="Refreshing Margarita"
+                      alt="Margarita served poolside at Casa La Playa"
                       width={600}
                       height={400}
                       className="rounded-lg object-cover"
@@ -67,7 +76,7 @@ export default function DiningPage() {
                     <p className="mb-4">
                       All meals and beverages are prepared with the highest sanitization standards. Drinking water and 
                       ice are carefully purified and fruits and vegetables are given a thorough antibacterial rinse to 
-                      ensure both the safety and comfort of ours guests.
+                      ensure both the safety and comfort of our guests.
                     </p>
                     <p className="mb-4">
                       Please note that advance notice is required in order to allow time for our staff to shop for the 
@@ -83,7 +92,7 @@ export default function DiningPage() {
 
                 <div className="clear-both">
                   <p className="text-lg leading-relaxed">
-                    View a Sample Dining Menu Here: <a href="/sample-menu" className="text-blue-600 hover:underline">Casa La Playa Sample Menu</a>
+                    View a Sample Dining Menu Here: <Link href="/sample-menu" className="text-blue-600 hover:underline">Chef Wendy's Casa La Playa Sample Menu</Link>
                   </p>
                 </div>
               </div>

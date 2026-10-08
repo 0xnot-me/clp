@@ -3,21 +3,31 @@ import Footer from "@/components/footer"
 import PageHeader from "@/components/page-header"
 import Image from "next/image"
 import ContactForm from "@/components/contact-form"
+import FactSheet from "@/components/fact-sheet"
+import { pageMetadata } from "@/lib/metadata"
+
+export const metadata = pageMetadata({
+  title: "About Casa La Playa | Staffed Beachfront Villa in Puerto Vallarta",
+  description:
+    "Casa La Playa is a 20,000 sq ft, 8-suite beachfront villa on Playa Camarones in downtown Puerto Vallarta with a private chef, maids, night watchman and concierge.",
+  path: "/about",
+})
 
 export default function AboutPage() {
   return (
     <main>
       <Navbar />
-      <PageHeader title="About" />
+      <PageHeader title="About Casa La Playa" />
       <div className="min-h-screen">
         <div className="container mx-auto px-4 py-16">
           <div className="grid md:grid-cols-3 gap-12">
             <div className="md:col-span-2">
+              <FactSheet />
               <div className="prose max-w-none">
                 <div className="flex flex-col md:flex-row gap-6 mb-6">
                   <Image
                     src="/gallery/full/casa-la-playa-puerto-vallarta-vacation-house-for-rent_0000s_0007_9.png"
-                    alt="Casa La Playa Exterior"
+                    alt="Casa La Playa villa exterior on the beach in Puerto Vallarta"
                     width={2800}
                     height={600}
                     className="rounded-lg w-full md:w-1/2 h-auto object-cover"
@@ -57,13 +67,13 @@ export default function AboutPage() {
                       The inside architecture and design of Casa La Playa closely rivals the beauty of the villa's 
                       gorgeous surroundings in Puerto Vallarta. Elegant contemporary architecture and an open 
                       spacious floorplan characterize this stylish Mexican villa, its 2 living areas and dining areas, 
-                      2 kitchens and kitchenettes, 8 bedroom suites, 8 full bathrooms, and 3 powder rooms. This rental villa offers plenty of space for guests to relax 
+                      2 kitchens and kitchenettes, 8 bedroom suites, 8 full bathrooms, and 2 half baths. This rental villa offers plenty of space for guests to relax 
                       and unwind!
                     </p>
                   </div>
                   <Image
                     src="/gallery/full/casa-la-playa-puerto-vallarta-vacation-house-for-rent_0000s_0005_7.png"
-                    alt="Casa La Playa Interior"
+                    alt="Casa La Playa interior living space with ocean views"
                     width={2800}
                     height={600}
                     className="rounded-lg w-full md:w-1/2 h-auto object-cover"
@@ -72,9 +82,9 @@ export default function AboutPage() {
 
                 <p className="text-lg leading-relaxed mb-6">
                   With central air conditioning, Wi-Fi internet access, satellite television, and full phone service, 
-                  Casa La Playa provides you with all the comforts of home while traveling. Our staff includes 2 
-                  talented chefs, 2 attentive housekeepers, a dedicated houseman, and a helpful concierge. The 
-                  villa's staff is respectfully here to provide a pampering, full-service experience that will make 
+                  Casa La Playa provides you with all the comforts of home while traveling. Our staff includes a 
+                  private chef, 2 attentive maids, a night watchman, and a bilingual concierge whose office is just 
+                  across the street. A bartender can be arranged whenever you need one. The villa's staff is respectfully here to provide a pampering, full-service experience that will make 
                   your stay in Puerto Vallarta, Mexico simply unforgettable.
                 </p>
 

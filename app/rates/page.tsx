@@ -2,6 +2,15 @@ import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
 import PageHeader from "@/components/page-header"
 import ContactForm from "@/components/contact-form"
+import { pageMetadata } from "@/lib/metadata"
+import { site } from "@/lib/site"
+
+export const metadata = pageMetadata({
+  title: "Casa La Playa Rates | 6–8 Bedroom Beachfront Villa, Puerto Vallarta",
+  description:
+    "Nightly rates for Casa La Playa Puerto Vallarta: 6 bedrooms $3,200, 7 bedrooms $4,000, full 8-bedroom house $5,000. Chef and full staff included. Sleeps 16.",
+  path: "/rates",
+})
 
 export default function RatesPage() {
   return (
@@ -25,9 +34,9 @@ export default function RatesPage() {
                     <thead>
                       <tr className="border-b">
                         <th className="text-left py-3 px-4">Dates</th>
-                        <th className="text-left py-3 px-4">6 Bedroom</th>
-                        <th className="text-left py-3 px-4">7 Bedroom</th>
-                        <th className="text-left py-3 px-4">8 Bedroom</th>
+                        <th className="text-left py-3 px-4">6 Bedroom <span className="font-normal text-gray-500">(up to 12 guests)</span></th>
+                        <th className="text-left py-3 px-4">7 Bedroom <span className="font-normal text-gray-500">(up to 14 guests)</span></th>
+                        <th className="text-left py-3 px-4">8 Bedroom <span className="font-normal text-gray-500">(up to 16 guests)</span></th>
                       </tr>
                     </thead>
                     <tbody>
@@ -110,8 +119,8 @@ export default function RatesPage() {
 
                 <div className="mb-8">
                   <h3 className="text-xl font-semibold mb-2">To reserve your private stay or book Casa La Playa for your next special event, contact our friendly staff at:</h3>
-                  <p className="text-gray-600">info@casalaplaya.com</p>
-                  <p className="text-gray-600">310-986-2299</p>
+                  <p className="text-gray-600"><a href={`mailto:${site.email}`} className="underline">{site.email}</a></p>
+                  <p className="text-gray-600"><a href={site.telHref} className="underline">{site.phoneDisplay}</a></p>
                 </div>
               </div>
             </div>

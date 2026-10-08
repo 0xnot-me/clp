@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next/types";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Script from 'next/script';
+import { site } from "@/lib/site";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -10,19 +11,17 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Casa La Playa Puerto Vallarta Mexico Vacation Home Rental",
-  description: "A superb study in elegant simplicity set on the beach in a tropical paradise. Enjoy near-perfect weather and breathtaking sunsets everyday.",
-  metadataBase: new URL('https://casalaplaya.com'),
+  title: {
+    default: "Casa La Playa Puerto Vallarta | 8-Bedroom Beachfront Villa with Chef",
+    template: "%s | Casa La Playa Puerto Vallarta",
+  },
+  description: "Casa La Playa Puerto Vallarta is a fully staffed 8-bedroom beachfront villa on Playa Camarones, a 10-minute walk to the Malecón. Private chef, pools, sleeps 16.",
+  metadataBase: new URL(site.url),
   openGraph: {
-    title: 'Casa La Playa Puerto Vallarta Mexico Vacation Home Rental',
-    description: 'A superb study in elegant simplicity set on the beach in a tropical paradise. Enjoy near-perfect weather and breathtaking sunsets everyday.',
-    url: 'https://casalaplaya.com',
-    siteName: 'Casa La Playa',
+    siteName: site.name,
     locale: 'en_US',
     type: 'website',
-  },
-  alternates: {
-    canonical: 'https://casalaplaya.com'
+    images: [{ url: site.ogImage, width: 1200, height: 630 }],
   },
   robots: {
     index: true,
@@ -49,7 +48,6 @@ export const metadata: Metadata = {
     ],
   },
   manifest: '/site.webmanifest',
-  themeColor: '#1a1a1a',
   appleWebApp: {
     capable: true,
     statusBarStyle: 'default',
@@ -64,7 +62,6 @@ export const viewport: Viewport = {
   ],
   width: 'device-width',
   initialScale: 1,
-  maximumScale: 1,
 }
 
 export default function RootLayout({
@@ -75,13 +72,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png" />
-        <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <meta name="msapplication-TileColor" content="#1a1a1a" />
-        <meta name="theme-color" content="#1a1a1a" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
       <body className={`${montserrat.variable} font-sans antialiased`}>
         {children}
