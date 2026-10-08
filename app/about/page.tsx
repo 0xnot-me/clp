@@ -84,8 +84,8 @@ export default function AboutPage() {
                   With central air conditioning, Wi-Fi internet access, satellite television, and full phone service, 
                   Casa La Playa provides you with all the comforts of home while traveling. Our staff includes a 
                   private chef, 2 attentive maids, a night watchman, and a bilingual concierge whose office is just 
-                  across the street. A bartender can be arranged whenever you need one. The villa's staff is respectfully here to provide a pampering, full-service experience that will make 
-                  your stay in Puerto Vallarta, Mexico simply unforgettable.
+                  across the street. A bartender can be arranged whenever you need one. We love our employees: almost all of them have worked for the owner's family for many years, and we employ whole families. We believe service is a big part of the experience, so we pay our staff well, and they're here to provide a pampering, full-service stay that will make 
+                  your time in Puerto Vallarta, Mexico simply unforgettable.
                 </p>
 
                 <p className="text-lg leading-relaxed mb-6">

@@ -90,7 +90,7 @@ const groups: { title: string; faqs: Faq[] }[] = [
       },
       {
         q: "How does grocery shopping and payment for food work?",
-        a: "The chef and her team do all the shopping for you, usually daily, and our house manager, Paz, provides receipts. Food and drinks are paid for in cash during your stay. Many groups give Paz a lump sum up front and she checks in with the group leader as it's spent. Cards are accepted, but card fees in Mexico can run over 20%, so cash works out better. There are ATMs nearby and Paz can point you to one.",
+        a: "The chef and her team do all the shopping for you, usually daily, and our house manager, Paz, provides receipts. Food and drinks are paid for in cash during your stay. Many groups give Paz a lump sum up front and she checks in with the group leader as it's spent. At this time we don't accept credit cards for food and drinks. There are ATMs nearby and Paz can point you to one.",
       },
       {
         q: "Can we have the chef cook dinner?",
@@ -127,7 +127,7 @@ const groups: { title: string; faqs: Faq[] }[] = [
       },
       {
         q: "Should we tip the staff?",
-        a: "The staff appreciate tips. We suggest 10–15% of the rental price, before taxes and fees, but it's up to you who to tip and how. The chef works independently, so she may give you a separate tip envelope for her team.",
+        a: "Our recommended tip is 10–15% or more of the rental rate before taxes, and it's up to you who to tip and how. We love our employees. Almost all of them have worked for the owner's family for many years, and we employ whole families. We believe service is a big part of the experience, so we pay our staff well. The chef works independently, so she may give you a separate tip envelope for her team.",
       },
     ],
   },
