@@ -6,70 +6,132 @@ import { JsonLd, faqSchema } from "@/components/json-ld"
 import { pageMetadata } from "@/lib/metadata"
 
 export const metadata = pageMetadata({
-  title: "Casa La Playa Puerto Vallarta FAQ | Guests, Chef, Rates, Location",
+  title: "Casa La Playa Puerto Vallarta FAQ | Rates, Chef, Food, Staff, Location",
   description:
-    "Answers about Casa La Playa Puerto Vallarta: where it is, how many guests it sleeps, what the chef and staff cover, rates and taxes, holiday minimums and how to book.",
+    "Answers about Casa La Playa Puerto Vallarta: location, guests, rates and taxes, the chef and food costs, staff, activities, tipping and how to book.",
   path: "/faq",
 })
 
-const faqs = [
+type Faq = { q: string; a: string }
+
+const groups: { title: string; faqs: Faq[] }[] = [
   {
-    q: "Where is Casa La Playa in Puerto Vallarta?",
-    a: "Casa La Playa is directly on Playa Camarones beach in Colonia 5 de Diciembre, on the north edge of downtown Puerto Vallarta, Jalisco, Mexico. It is not in Conchas Chinas, the Hotel Zone or Marina Vallarta.",
+    title: "The House and Location",
+    faqs: [
+      {
+        q: "Where is Casa La Playa in Puerto Vallarta?",
+        a: "Casa La Playa is directly on Playa Camarones beach in Colonia 5 de Diciembre, on the north edge of downtown Puerto Vallarta, Jalisco, Mexico. It is not in Conchas Chinas, the Hotel Zone or Marina Vallarta.",
+      },
+      {
+        q: "How far is Casa La Playa from the Malecón?",
+        a: "The Malecón boardwalk is about a 10-minute walk (0.8 km) along the beach or through town. Restaurants, shops, galleries and nightlife in Old Town are walking distance, so most guests don't need taxis.",
+      },
+      {
+        q: "How far is Casa La Playa from the Puerto Vallarta airport?",
+        a: "Puerto Vallarta International Airport (PVR) is 15–20 minutes by car, south toward town.",
+      },
+      {
+        q: "How many guests does Casa La Playa sleep?",
+        a: "The full 8-bedroom house sleeps up to 16 guests. The 6-bedroom option sleeps up to 12 and the 7-bedroom option up to 14.",
+      },
+      {
+        q: "How many bedrooms and bathrooms are there?",
+        a: "There are 8 oceanfront bedroom suites, 8 full bathrooms and 2 half baths across 20,000 square feet on three floors, connected by an elevator.",
+      },
+      {
+        q: "Does Casa La Playa have pools, air conditioning and Wi-Fi?",
+        a: "Yes. The villa has 2 pools and a jacuzzi, central air conditioning, Wi-Fi in every room, satellite TV with sports channels, 2 full kitchens and 2 kitchenettes, an elevator and parking for 2 cars.",
+      },
+      {
+        q: "Will my cell phone work in Puerto Vallarta?",
+        a: "Yes, your phone will work, but it will be roaming in Mexico, so check your carrier's international plan before you travel. The house has Wi-Fi in every room.",
+      },
+    ],
   },
   {
-    q: "How far is Casa La Playa from the Malecón?",
-    a: "The Malecón boardwalk is about a 10-minute walk (0.8 km) along the beach or through town. Restaurants, shops, galleries and nightlife in Old Town are walking distance, so most guests don't need taxis.",
+    title: "Rates and Booking",
+    faqs: [
+      {
+        q: "Can we rent only part of the villa?",
+        a: "Yes. You can rent 6 bedrooms, 7 bedrooms or the full 8-bedroom house. We only rent to one group at a time, so you never share the villa with strangers.",
+      },
+      {
+        q: "How much does Casa La Playa cost per night?",
+        a: "Nightly rates are $3,200 USD for 6 bedrooms, $4,000 for 7 bedrooms and $5,000 for the full 8-bedroom house. Christmas week is $7,000 and Easter week is $5,500 per night (8 bedrooms only). Rates include the staff and chef service and are subject to 19% hotel and local taxes. Rates can change until your booking is confirmed. Call or text 310-986-2299 for an exact quote for your dates.",
+      },
+      {
+        q: "Is there a minimum stay over the holidays?",
+        a: "Christmas and New Year's require booking the full 8-bedroom house with a one-week minimum.",
+      },
+      {
+        q: "How do I book Casa La Playa?",
+        a: "Book directly with us by calling 310-986-2299, emailing info@casalaplaya.com or sending the inquiry form with your dates and group size. We'll confirm availability and rates.",
+      },
+      {
+        q: "Is it cheaper to book Casa La Playa directly?",
+        a: "Yes. When you book directly with us there are no booking-site service fees, which typically add 4–12% on booking sites. It's the same house, the same staff and the same nightly rates.",
+      },
+    ],
   },
   {
-    q: "How far is Casa La Playa from the Puerto Vallarta airport?",
-    a: "Puerto Vallarta International Airport (PVR) is 15–20 minutes by car, south toward town.",
+    title: "Chef, Food and Drinks",
+    faqs: [
+      {
+        q: "Are meals included?",
+        a: "Chef service for breakfast and lunch is included with every stay, prepared by Chef Wendy Galeana and her team. Dinner chef service is available for an additional charge. The cost of the food and drinks themselves is separate.",
+      },
+      {
+        q: "How much should we budget for food and drinks?",
+        a: "We estimate about $20 to $60 per person per day for three meals, depending mostly on how much you drink and your drink preferences.",
+      },
+      {
+        q: "How does grocery shopping and payment for food work?",
+        a: "The chef and her team do all the shopping for you, usually daily, and our house manager, Paz, provides receipts. Food and drinks are paid for in cash during your stay. Many groups give Paz a lump sum up front and she checks in with the group leader as it's spent. Cards are accepted, but card fees in Mexico can run over 20%, so cash works out better. There are ATMs nearby and Paz can point you to one.",
+      },
+      {
+        q: "Can we have the chef cook dinner?",
+        a: "Yes. Many guests love the house so much they don't want to go out, so we offer dinner chef service for an additional fee. Chefs are in high demand, so let us know in advance which nights you'd like dinner.",
+      },
+      {
+        q: "Can the chef handle allergies and dietary restrictions?",
+        a: "Yes. Let the chef know about food allergies and special requests before you arrive. She cooks family-style meals from a menu or by request, and has a full vegetarian menu. See the sample lunch and vegetarian menus for ideas. Keep in mind it's Mexico, so a few specific items may not be available, but the chef will do her best to accommodate.",
+      },
+    ],
   },
   {
-    q: "How many guests does Casa La Playa sleep?",
-    a: "The full 8-bedroom house sleeps up to 16 guests. The 6-bedroom option sleeps up to 12 and the 7-bedroom option up to 14.",
-  },
-  {
-    q: "How many bedrooms and bathrooms are there?",
-    a: "There are 8 oceanfront bedroom suites, 8 full bathrooms and 2 half baths across 20,000 square feet on three floors, connected by an elevator.",
-  },
-  {
-    q: "Can we rent only part of the villa?",
-    a: "Yes. You can rent 6 bedrooms, 7 bedrooms or the full 8-bedroom house. We only rent to one group at a time, so you never share the villa with strangers.",
-  },
-  {
-    q: "How much does Casa La Playa cost per night?",
-    a: "Nightly rates are $3,200 USD for 6 bedrooms, $4,000 for 7 bedrooms and $5,000 for the full 8-bedroom house. Christmas week is $7,000 and Easter week is $5,500 per night (8 bedrooms only). Rates include the staff and chef service and are subject to 19% hotel and local taxes. Rates can change until your booking is confirmed. Call or text 310-986-2299 for an exact quote for your dates.",
-  },
-  {
-    q: "Is there a minimum stay over the holidays?",
-    a: "Christmas and New Year's require booking the full 8-bedroom house with a one-week minimum.",
-  },
-  {
-    q: "What staff come with the house?",
-    a: "Every stay includes a private chef, two maids for daily housekeeping, a night watchman and a bilingual concierge whose office is across the street. A bartender can be arranged when you need one.",
-  },
-  {
-    q: "Are meals included?",
-    a: "Chef service for breakfast and lunch is included. Dinner chef service is available for an additional charge per guest per day. Guests pay for the food and drinks themselves: the staff do the grocery shopping, our property manager keeps receipts, and you reimburse the staff at the end of each week.",
-  },
-  {
-    q: "Can the chef handle dietary restrictions?",
-    a: "Yes. The chef cooks family-style meals from a menu or by special request and will accommodate dietary restrictions and preferences with advance notice. See the sample lunch and vegetarian menus for examples.",
-  },
-  {
-    q: "Does Casa La Playa have pools, air conditioning and Wi-Fi?",
-    a: "Yes. The villa has 2 pools and a jacuzzi, central air conditioning, Wi-Fi, satellite TV, 2 full kitchens and 2 kitchenettes, an elevator and parking for 2 cars.",
-  },
-  {
-    q: "How do I book Casa La Playa?",
-    a: "Book directly with us by calling 310-986-2299, emailing info@casalaplaya.com or sending the inquiry form with your dates and group size. We'll confirm availability and rates.",
-  },
-  {
-    q: "Is it cheaper to book Casa La Playa directly?",
-    a: "Yes. When you book directly with us there are no booking-site service fees, which typically add 4–12% on booking sites. It's the same house, the same staff and the same nightly rates.",
+    title: "During Your Stay",
+    faqs: [
+      {
+        q: "What staff come with the house?",
+        a: "Every stay includes a private chef, two maids for daily housekeeping, a night watchman and Paz, our bilingual house manager and concierge, whose office is across the street. A bartender can be arranged when you need one. A staff member is at the house throughout your stay, so if you need anything, just ask.",
+      },
+      {
+        q: "What happens when we arrive?",
+        a: "You'll get a tour of the house, meet the staff and be welcomed with drinks (margaritas, beer and fresh fruit waters) and Mexican appetizers. Paz will go over the house guide and the few house rules we have.",
+      },
+      {
+        q: "What activities can we book?",
+        a: "Jet skis, parasailing, banana boat rides, kayaks and beach volleyball are available on the beach in front of the house from local vendors. For your security, please don't bring beach vendors into the house. For tours and excursions we recommend Vallarta Adventures, which you can book and pay for online. For scuba diving, Chico's Dive Shop can come to the house with equipment and give a refresher course in the pool before taking you out. Paz can help arrange it.",
+      },
+      {
+        q: "Can we get massages or spa services at the house?",
+        a: "Yes. Our preferred vendors make house calls for massages, hair, makeup, manicures and pedicures. Paz has a menu of services and will help you schedule.",
+      },
+      {
+        q: "What if someone needs a doctor?",
+        a: "Tell the staff right away in any emergency. There are lifeguards trained in CPR on the beach, two hospitals close to the house, and a house doctor, used by many of the local hotels, who makes house calls at any time of day.",
+      },
+      {
+        q: "Should we tip the staff?",
+        a: "The staff appreciate tips. We suggest 10–15% of the rental price, before taxes and fees, but it's up to you who to tip and how. The chef works independently, so she may give you a separate tip envelope for her team.",
+      },
+    ],
   },
 ]
+
+const faqs = groups.flatMap((g) => g.faqs)
+
+const slug = (s: string) => s.toLowerCase().replace(/[^a-z]+/g, "-")
 
 export default function FaqPage() {
   return (
@@ -80,10 +142,22 @@ export default function FaqPage() {
       <div className="container mx-auto px-4 py-16">
         <div className="grid md:grid-cols-3 gap-12">
           <div className="md:col-span-2 min-w-0 space-y-8">
-            {faqs.map(({ q, a }) => (
-              <section key={q}>
-                <h2 className="text-2xl font-bold mb-2">{q}</h2>
-                <p className="text-lg leading-relaxed text-gray-700">{a}</p>
+            <nav aria-label="FAQ topics" className="flex flex-wrap gap-2">
+              {groups.map((g) => (
+                <a key={g.title} href={`#${slug(g.title)}`} className="border border-gray-900 px-4 py-2 text-base font-medium">
+                  {g.title}
+                </a>
+              ))}
+            </nav>
+            {groups.map((g) => (
+              <section key={g.title} id={slug(g.title)} className="scroll-mt-28 space-y-6">
+                <h2 className="text-3xl font-black border-b pb-2">{g.title}</h2>
+                {g.faqs.map(({ q, a }) => (
+                  <div key={q}>
+                    <h3 className="text-xl md:text-2xl font-bold mb-2">{q}</h3>
+                    <p className="text-lg leading-relaxed text-gray-700">{a}</p>
+                  </div>
+                ))}
               </section>
             ))}
           </div>

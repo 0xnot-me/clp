@@ -81,12 +81,10 @@ export default function DiningPage() {
                     </p>
                     <p className="mb-4">
                       Please note that advance notice is required in order to allow time for our staff to shop for the 
-                      freshest ingredients and prepare wholesome meals. Our property manager prepares receipts for the 
-                      cost of groceries and guests are responsible for reimbursing the staff for all supplies at the 
-                      end of each week's stay.
+                      freshest ingredients and prepare wholesome meals. Our house manager, Paz, provides receipts for all groceries and drinks, which are paid in cash during your stay. Many groups give Paz a lump sum up front and she checks in with the group leader as it's spent. We estimate about $20 to $60 per person per day for food and drinks.
                     </p>
                     <p className="mb-4">
-                    Enjoy hassle-free vacation dining! Our professional chef and staff not only prepare all your meals and drinks, but we also handle all the grocery shopping for you—a significant convenience in a foreign country where navigating local markets and language barriers can be challenging. Our property manager takes care of all the shopping and provides detailed receipts, with guests simply reimbursing the staff for food and beverage purchases at the end of each guest's stay. You can relax completely while we manage everything from shopping to preparation to cleanup.
+                    Enjoy hassle-free vacation dining! Our professional chef and staff not only prepare all your meals and drinks, but we also handle all the grocery shopping for you—a significant convenience in a foreign country where navigating local markets and language barriers can be challenging. The chef and her team take care of all the shopping and Paz provides detailed receipts. You can relax completely while we manage everything from shopping to preparation to cleanup.
                     </p>
                   </div>
                 </div>
