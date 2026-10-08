@@ -4,7 +4,7 @@ import PageHeader from "@/components/page-header"
 import ContactForm from "@/components/contact-form"
 import { pageMetadata } from "@/lib/metadata"
 import { holidayRates, rentalOptions, site, usd } from "@/lib/site"
-import RateCalculator from "@/components/rate-calculator"
+import QuoteCta from "@/components/quote-cta"
 
 export const metadata = pageMetadata({
   title: "Casa La Playa Rates | 6–8 Bedroom Beachfront Villa, Puerto Vallarta",
@@ -27,7 +27,7 @@ export default function RatesPage() {
                   All rates include private access to Casa La Playa's luxury amenities and the villa's full-service staff to best accommodate you during your stay.
                 </p>
 
-                <RateCalculator />
+                <QuoteCta />
 
                 <h2 className="text-2xl font-bold mb-4">Nightly Rates ($USD)</h2>
                 <div className="md:hidden not-prose space-y-3">
@@ -109,7 +109,7 @@ export default function RatesPage() {
                 <div className="mb-8">
                   <h3 className="text-xl font-semibold mb-2">To reserve your private stay or book Casa La Playa for your next special event, contact our friendly staff at:</h3>
                   <p className="text-gray-600"><a href={`mailto:${site.email}`} className="underline">{site.email}</a></p>
-                  <p className="text-gray-600"><a href={site.telHref} className="underline">{site.phoneDisplay}</a></p>
+                  <p className="text-gray-600"><a href={site.telHref} className="underline">{site.phoneDisplay}</a> (call or <a href={site.smsHref} className="underline">text</a>)</p>
                 </div>
               </div>
             </div>

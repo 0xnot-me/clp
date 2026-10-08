@@ -39,7 +39,7 @@ const faqs = [
   },
   {
     q: "How much does Casa La Playa cost per night?",
-    a: "Nightly rates are $3,200 USD for 6 bedrooms, $4,000 for 7 bedrooms and $5,000 for the full 8-bedroom house. Christmas week is $7,000 and Easter week is $5,500 per night (8 bedrooms only). Rates include the staff and chef service and are subject to 19% hotel and local taxes. Rates can change until your booking is confirmed. The calculator on the rates page gives an instant estimate for your dates.",
+    a: "Nightly rates are $3,200 USD for 6 bedrooms, $4,000 for 7 bedrooms and $5,000 for the full 8-bedroom house. Christmas week is $7,000 and Easter week is $5,500 per night (8 bedrooms only). Rates include the staff and chef service and are subject to 19% hotel and local taxes. Rates can change until your booking is confirmed. Call or text 310-986-2299 for an exact quote for your dates.",
   },
   {
     q: "Is there a minimum stay over the holidays?",

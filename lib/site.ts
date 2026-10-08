@@ -6,6 +6,7 @@ export const site = {
   phoneDisplay: "310-986-2299",
   phoneE164: "+13109862299",
   telHref: "tel:+13109862299",
+  smsHref: "sms:+13109862299",
   instagram: "https://www.instagram.com/casalaplaya/",
   vrbo8Bedroom: "https://www.vrbo.com/906203",
   vrbo6Bedroom: "https://www.vrbo.com/405807",
@@ -44,11 +45,6 @@ export const holidayRates = {
   easter: 5500,
   christmasMinNights: 7,
 }
-
-export const bookingSiteFeeRange = [0.04, 0.12] as const
-
-export const taxRate = 0.19
-export const taxLabel = "19% hotel and local taxes"
 
 export const usd = (n: number) =>
   n.toLocaleString("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 })

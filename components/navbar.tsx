@@ -140,6 +140,13 @@ export default function Navbar() {
               </svg>
               310-986-2299
             </Link>
+            <a
+              href={site.smsHref}
+              className="block px-3 py-2 text-white/80 hover:text-white text-base tracking-wider transition-colors"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Text us
+            </a>
           </div>
         </div>
       </div>

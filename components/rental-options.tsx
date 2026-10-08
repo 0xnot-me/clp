@@ -44,10 +44,10 @@ export default function RentalOptions() {
                     />
                   </div>
                   <Link
-                    href="/rates#calculator"
+                    href="/rates#quote"
                     className="absolute bottom-0 left-0 right-0 bg-[#333333] text-white py-4 font-semibold tracking-[0.2em] text-sm uppercase text-center hover:bg-black"
                   >
-                    Calculate Your Stay
+                    Get Your Exact Quote
                   </Link>
                 </div>
               </div>

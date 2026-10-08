@@ -48,12 +48,15 @@ export default function Features() {
             for up to 16 guests, just blocks from downtown Puerto Vallarta and a 10-minute walk to the Malecón.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-3">
-            <Link href="/rates#calculator" className="inline-block bg-gray-900 text-white px-8 py-3 font-medium">
+            <Link href="/rates#quote" className="inline-block bg-gray-900 text-white px-8 py-3 font-medium">
               SEE RATES: FROM {usd(rentalOptions[0].nightly)}/NIGHT
             </Link>
             <Link href={site.telHref} className="inline-block border border-gray-900 px-8 py-3 font-medium">
               CALL US NOW!
             </Link>
+            <a href={site.smsHref} className="inline-block border border-gray-900 px-8 py-3 font-medium">
+              TEXT US
+            </a>
           </div>
         </div>
 

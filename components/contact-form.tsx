@@ -1,25 +1,10 @@
 "use client"
 
-import { FormEvent, useEffect, useRef, useState } from "react"
-
-export const PREFILL_EVENT = "clp:prefill-inquiry"
+import { FormEvent, useState } from "react"
 
 export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
-  const messageRef = useRef<HTMLTextAreaElement>(null)
-
-  useEffect(() => {
-    const prefill = (e: Event) => {
-      const field = messageRef.current
-      if (!field) return
-      field.value = (e as CustomEvent<string>).detail
-      field.focus({ preventScroll: true })
-    }
-    window.addEventListener(PREFILL_EVENT, prefill)
-    return () => window.removeEventListener(PREFILL_EVENT, prefill)
-  }, [])
-
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault()
     setIsSubmitting(true)
@@ -101,7 +86,7 @@ export default function ContactForm() {
         </div>
         <div>
           <textarea
-            ref={messageRef}
+           
             name="message"
             placeholder="Message: Dates and Reservation Details"
             rows={4}
