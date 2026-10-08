@@ -1,6 +1,7 @@
 'use client'
 
 import Link from "next/link"
+import Image from "next/image"
 import Navbar from "./navbar"
 import { rentalOptions, usd } from "@/lib/site"
 
@@ -8,6 +9,15 @@ export default function Hero() {
   return (
     <div className="relative h-screen w-full">
       <div className="absolute inset-0 overflow-hidden bg-black">
+        <Image
+          src="/hero-poster.jpg"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center"
+          aria-hidden="true"
+        />
         <video
           className="absolute inset-0 h-full w-full object-cover"
           autoPlay
