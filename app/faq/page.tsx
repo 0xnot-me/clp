@@ -4,6 +4,7 @@ import PageHeader from "@/components/page-header"
 import ContactForm from "@/components/contact-form"
 import { JsonLd, faqSchema } from "@/components/json-ld"
 import { pageMetadata } from "@/lib/metadata"
+import { ReelCard } from "@/components/vibe-reel"
 
 export const metadata = pageMetadata({
   title: "Casa La Playa Puerto Vallarta FAQ | Rates, Chef, Food, Staff, Location",
@@ -163,7 +164,23 @@ export default function FaqPage() {
                   </div>
                 ))}
               </section>
-            ))}
+            )).flatMap((section, i) =>
+              i === 0
+                ? [
+                    section,
+                    <section key="vibe" className="rounded-xl bg-gray-50 p-5 sm:p-8 grid sm:grid-cols-2 gap-6 items-center">
+                      <div>
+                        <h2 className="text-2xl md:text-3xl font-black">See the Vibe</h2>
+                        <p className="text-lg text-gray-700 mt-2 leading-relaxed">
+                          Watch a stay at Casa La Playa through the eyes of travel creator @adventures_bysky, who called
+                          it &ldquo;the ultimate beachfront vacation home.&rdquo;
+                        </p>
+                      </div>
+                      <ReelCard />
+                    </section>,
+                  ]
+                : [section],
+            )}
           </div>
           <ContactForm />
         </div>

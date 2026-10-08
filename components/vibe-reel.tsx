@@ -26,28 +26,34 @@ export default function VibeReel() {
           </div>
         </div>
 
-        <a
-          href={REEL_URL}
-          target="_blank"
-          rel="noopener"
-          aria-label={`Watch @${REEL_CREATOR}'s Instagram reel of Casa La Playa`}
-          className="group relative block w-full max-w-[420px] mx-auto aspect-[4/5] overflow-hidden rounded-xl"
-        >
-          <Image
-            src="/Penthouse-view.jpg"
-            alt="Sunset from the Casa La Playa penthouse terrace over Banderas Bay"
-            fill
-            sizes="(min-width: 1024px) 420px, 100vw"
-            className="object-cover group-hover:scale-105 transition-transform"
-          />
-          <span className="absolute inset-0 bg-black/30 flex flex-col items-center justify-center text-white gap-3">
-            <span className="w-20 h-20 rounded-full bg-white/90 text-black flex items-center justify-center">
-              <Play className="w-9 h-9 ml-1" fill="currentColor" aria-hidden="true" />
-            </span>
-            <span className="text-lg font-semibold">Watch on Instagram</span>
-          </span>
-        </a>
+        <ReelCard />
       </div>
     </section>
+  )
+}
+
+export function ReelCard() {
+  return (
+    <a
+      href={REEL_URL}
+      target="_blank"
+      rel="noopener"
+      aria-label={`Watch @${REEL_CREATOR}'s Instagram reel of Casa La Playa`}
+      className="group relative block w-full max-w-[420px] mx-auto aspect-[4/5] overflow-hidden rounded-xl"
+    >
+      <Image
+        src="/Penthouse-view.jpg"
+        alt="Sunset from the Casa La Playa penthouse terrace over Banderas Bay"
+        fill
+        sizes="(min-width: 1024px) 420px, 100vw"
+        className="object-cover group-hover:scale-105 transition-transform"
+      />
+      <span className="absolute inset-0 bg-black/30 flex flex-col items-center justify-center text-white gap-3">
+        <span className="w-20 h-20 rounded-full bg-white/90 text-black flex items-center justify-center">
+          <Play className="w-9 h-9 ml-1" fill="currentColor" aria-hidden="true" />
+        </span>
+        <span className="text-lg font-semibold">Watch on Instagram</span>
+      </span>
+    </a>
   )
 }
