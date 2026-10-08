@@ -55,7 +55,7 @@ const faqs = [
   },
   {
     q: "Can the chef handle dietary restrictions?",
-    a: "Yes. The chef cooks family-style meals from a menu or by special request and will accommodate dietary restrictions and preferences with advance notice. See the sample menu for examples.",
+    a: "Yes. The chef cooks family-style meals from a menu or by special request and will accommodate dietary restrictions and preferences with advance notice. See the sample lunch and vegetarian menus for examples.",
   },
   {
     q: "Does Casa La Playa have pools, air conditioning and Wi-Fi?",

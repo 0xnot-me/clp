@@ -17,6 +17,7 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       { source: "/contact-us", destination: "/contact", permanent: true },
+      { source: "/casa-la-playa-chef-menus.pdf", destination: "/sample-menu", permanent: true },
       { source: "/weddings", destination: "/about", permanent: true },
       { source: "/floorplan", destination: "/gallery", permanent: true },
       { source: "/blueprints", destination: "/gallery", permanent: true },

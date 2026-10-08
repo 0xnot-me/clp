@@ -5,6 +5,7 @@ import Image from "next/image"
 import ContactForm from "@/components/contact-form"
 import Link from "next/link"
 import { pageMetadata } from "@/lib/metadata"
+import { sampleMenus } from "@/lib/menus"
 
 export const metadata = pageMetadata({
   title: "Private Chef & Dining at Casa La Playa Puerto Vallarta",
@@ -90,11 +91,33 @@ export default function DiningPage() {
                   </div>
                 </div>
 
-                <div className="clear-both">
-                  <p className="text-lg leading-relaxed">
-                    View a Sample Dining Menu Here: <Link href="/sample-menu" className="text-blue-600 hover:underline">Chef Wendy's Casa La Playa Sample Menu</Link>
+                <section className="clear-both not-prose pt-4">
+                  <h2 className="text-3xl font-bold">Take a Look at Our Sample Menus</h2>
+                  <p className="text-lg text-gray-600 mt-2 mb-6">
+                    A taste of what Chef Wendy Galeana cooks for guests. Every dish can be adapted to your tastes and
+                    dietary needs.
                   </p>
-                </div>
+                  <div className="grid sm:grid-cols-2 gap-6">
+                    {sampleMenus.map((menu) => (
+                      <Link key={menu.id} href={`/sample-menu#${menu.id}`} className="group block rounded-lg border overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                        <div className="relative aspect-[4/3] overflow-hidden bg-gray-50">
+                          <Image
+                            src={menu.image}
+                            alt={menu.alt}
+                            fill
+                            sizes="(min-width: 640px) 33vw, 100vw"
+                            className="object-cover object-top group-hover:scale-105 transition-transform"
+                          />
+                        </div>
+                        <div className="p-4">
+                          <h3 className="text-xl font-bold">{menu.title}</h3>
+                          <p className="text-gray-600 mt-1">{menu.blurb}</p>
+                          <span className="inline-block mt-3 font-semibold underline">View the menu</span>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                </section>
               </div>
             </div>
 
