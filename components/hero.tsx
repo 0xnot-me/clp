@@ -8,12 +8,20 @@ import { rentalOptions, usd } from "@/lib/site"
 export default function Hero() {
   return (
     <div className="relative h-screen w-full">
-      {/* Video background contained within hero section */}
-      <div className="absolute inset-0 overflow-hidden">
+      <div className="absolute inset-0 overflow-hidden bg-black">
+        <Image
+          src="/header.jpg"
+          alt="Casa La Playa beachfront villa on Playa Camarones in Puerto Vallarta"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
         <iframe
-          src="https://player.vimeo.com/video/358145420?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1&preload=auto"
-          className="absolute top-1/2 left-1/2 md:h-[120%] md:w-[120%] h-auto w-auto min-w-[250%] min-h-[250%] md:min-w-full md:min-h-full object-cover transform -translate-x-1/2 -translate-y-1/2 md:scale-100 scale-[1.75]"
+          src="https://player.vimeo.com/video/358145420?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1&playsinline=1"
+          className="hidden md:block absolute top-1/2 left-1/2 h-[120%] w-[120%] min-w-full min-h-full object-cover -translate-x-1/2 -translate-y-1/2"
           allow="autoplay; fullscreen"
+          referrerPolicy="origin"
           title="Video tour of Casa La Playa beachfront villa in Puerto Vallarta"
           frameBorder="0"
         />
@@ -33,29 +41,28 @@ export default function Hero() {
         <span className="block text-sm tracking-wide">Book direct, no booking-site fees</span>
       </Link>
 
-      <div 
+      <div
         onClick={() => {
-          document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' });
+          document.getElementById("features")?.scrollIntoView({ behavior: "smooth" })
         }}
         className="absolute bottom-8 inset-x-0 mx-auto w-fit z-10 text-white flex flex-col items-center justify-center gap-2 cursor-pointer animate-bounce hover:text-gray-200 transition-colors text-center"
       >
         <span className="text-lg font-medium">Learn More</span>
-        <svg 
-          xmlns="http://www.w3.org/2000/svg" 
-          className="h-6 w-6 mx-auto" 
-          fill="none" 
-          viewBox="0 0 24 24" 
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-6 w-6 mx-auto"
+          fill="none"
+          viewBox="0 0 24 24"
           stroke="currentColor"
         >
-          <path 
-            strokeLinecap="round" 
-            strokeLinejoin="round" 
-            strokeWidth={2} 
-            d="M19 14l-7 7m0 0l-7-7m7 7V3" 
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M19 14l-7 7m0 0l-7-7m7 7V3"
           />
         </svg>
       </div>
     </div>
   )
 }
-
