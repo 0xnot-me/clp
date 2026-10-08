@@ -4,11 +4,12 @@ import PageHeader from "@/components/page-header"
 import Image from "next/image"
 import ContactForm from "@/components/contact-form"
 import Link from "next/link"
+import { JsonLd, breadcrumbSchema } from "@/components/json-ld"
 import { pageMetadata } from "@/lib/metadata"
 import { sampleMenus } from "@/lib/menus"
 
 export const metadata = pageMetadata({
-  title: "Private Chef & Dining at Casa La Playa Puerto Vallarta",
+  title: "Puerto Vallarta Villa With Private Chef | Casa La Playa",
   description:
     "Breakfast and lunch from Casa La Playa's private chef are included. Dinner is available for a fee, the staff shop for groceries, and dietary needs are welcome.",
   path: "/dining",
@@ -17,6 +18,7 @@ export const metadata = pageMetadata({
 export default function DiningPage() {
   return (
     <main>
+      <JsonLd data={breadcrumbSchema("Dining", "/dining")} />
       <Navbar />
       <PageHeader title="Private Chef & Dining" />
       <div className="min-h-screen">

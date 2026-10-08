@@ -10,7 +10,7 @@ export default function Amenities() {
     "20,000 sq. ft. modern villa",
     "175 ft. of beachfront on Playa Camarones",
     "3-story plan with elevator",
-    "2 pools and a jacuzzi",
+    "2 swimming pools, a reflecting pool and a jacuzzi",
     "2 full-size kitchens and 2 kitchenettes",
     "In town, walking distance to restaurants and shops",
     "Private chef for breakfast and lunch",

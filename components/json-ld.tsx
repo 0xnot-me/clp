@@ -44,7 +44,7 @@ export const vacationRentalSchema = {
     postalCode: site.address.postalCode,
     addressCountry: site.address.country,
   },
-  sameAs: [site.instagram, site.vrbo8Bedroom, site.vrbo6Bedroom],
+  sameAs: [site.instagram, site.vrbo8Bedroom, site.vrbo6Bedroom, site.airbnb],
   containsPlace: {
     "@type": "Accommodation",
     additionalType: "EntirePlace",
@@ -58,6 +58,7 @@ export const vacationRentalSchema = {
       amenity("beachAccess"),
       amenity("ocean view"),
       amenity("pool"),
+      amenity("reflecting pool"),
       amenity("hot tub"),
       amenity("ac"),
       amenity("wifi"),
@@ -69,6 +70,17 @@ export const vacationRentalSchema = {
       amenity("concierge"),
     ],
   },
+}
+
+export function breadcrumbSchema(name: string, path: string) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: site.url },
+      { "@type": "ListItem", position: 2, name, item: `${site.url}${path}` },
+    ],
+  }
 }
 
 export function faqSchema(faqs: { q: string; a: string }[]) {

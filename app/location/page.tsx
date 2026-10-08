@@ -1,10 +1,11 @@
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
 import PageHeader from "@/components/page-header"
+import { JsonLd, breadcrumbSchema } from "@/components/json-ld"
 import { pageMetadata } from "@/lib/metadata"
 
 export const metadata = pageMetadata({
-  title: "Casa La Playa Location | Playa Camarones, Downtown Puerto Vallarta",
+  title: "Downtown Puerto Vallarta Beachfront Villa | Playa Camarones",
   description:
     "Casa La Playa sits on Playa Camarones in downtown Puerto Vallarta, about a 10-minute walk to the Malecón and 15–20 minutes from the airport.",
   path: "/location",
@@ -21,6 +22,7 @@ const distances = [
 export default function LocationPage() {
   return (
     <main>
+      <JsonLd data={breadcrumbSchema("Location", "/location")} />
       <Navbar />
       <PageHeader title="Location: Playa Camarones" />
       <div className="pt-2 min-h-screen">
@@ -36,6 +38,21 @@ export default function LocationPage() {
             <p className="text-lg leading-relaxed">
             The villa is in Colonia 5 de Diciembre, on the north edge of downtown Puerto Vallarta, Jalisco. It is not in Conchas Chinas, the Hotel Zone or Marina Vallarta.
             </p>
+          </div>
+          <h2 className="text-2xl font-bold mb-4">Hillside villa, beach hotel, or Casa La Playa?</h2>
+          <div className="grid sm:grid-cols-3 gap-4 mb-12 text-lg">
+            <div className="border rounded-xl p-5">
+              <h3 className="font-bold mb-2">Hillside villa</h3>
+              <p className="text-gray-700">Views, but a taxi for dinner, the beach and nightlife.</p>
+            </div>
+            <div className="border rounded-xl p-5">
+              <h3 className="font-bold mb-2">Beach hotel</h3>
+              <p className="text-gray-700">On the sand, but you share the pool, restaurant and lobby with other guests.</p>
+            </div>
+            <div className="border-2 border-black rounded-xl p-5">
+              <h3 className="font-bold mb-2">Casa La Playa</h3>
+              <p className="text-gray-700">On the beach, walk to town, and the whole villa is yours. One group at a time.</p>
+            </div>
           </div>
           <h2 className="text-2xl font-bold mb-4">How Far Is Casa La Playa From...</h2>
           <dl className="grid sm:grid-cols-[18rem_1fr] gap-x-6 gap-y-2 text-lg mb-12">

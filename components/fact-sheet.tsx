@@ -7,7 +7,7 @@ export default function FactSheet() {
     ["Guests", `Up to ${site.maxGuests}`],
     ["Bathrooms", `${site.fullBathrooms} full, ${site.halfBathrooms} half`],
     ["Size", "20,000 sq. ft., 3 stories with elevator, 175 ft. of beachfront"],
-    ["Pools", "2 pools and a jacuzzi"],
+    ["Pools", site.pools],
     ["Staff", staff.join("; ")],
     ["Meals", "Breakfast and lunch chef service included; dinner available for a fee; guests reimburse groceries"],
     ["Distances", "About a 10-minute walk to the Malecón; 15–20 minutes by car to Puerto Vallarta airport (PVR)"],

@@ -8,7 +8,7 @@ import { pageMetadata } from "@/lib/metadata"
 export const metadata = pageMetadata({
   title: "Casa La Playa Amenities | Pools, Elevator, Chef and Full Staff",
   description:
-    "Amenities at Casa La Playa Puerto Vallarta: 8 beachfront suites, 2 pools and a jacuzzi, elevator, 2 kitchens, 175 ft of beachfront, private chef, maids and concierge.",
+    "Amenities at Casa La Playa Puerto Vallarta: 8 beachfront suites, 2 swimming pools, a reflecting pool and a jacuzzi, elevator, 2 kitchens, 175 ft of beachfront, private chef, maids and concierge.",
   path: "/amenities",
 })
 

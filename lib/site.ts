@@ -10,6 +10,7 @@ export const site = {
   instagram: "https://www.instagram.com/casalaplaya/",
   vrbo8Bedroom: "https://www.vrbo.com/906203",
   vrbo6Bedroom: "https://www.vrbo.com/405807",
+  airbnb: "https://www.airbnb.com/rooms/20475507",
   address: {
     street: "Calle Paraguay 1201",
     neighborhood: "Colonia 5 de Diciembre",
@@ -27,6 +28,7 @@ export const site = {
   squareFeet: 20000,
   beachfrontFeet: 175,
   priceRange: "$3,200–$5,000 USD per night",
+  pools: "2 swimming pools, a reflecting pool and a jacuzzi",
   ogImage: "/og-image.jpg",
 }
 

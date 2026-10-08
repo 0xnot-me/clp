@@ -13,10 +13,10 @@ const montserrat = localFont({
 
 export const metadata: Metadata = {
   title: {
-    default: "Casa La Playa Puerto Vallarta | 8-Bedroom Beachfront Villa with Chef",
+    default: "Beachfront Villa Puerto Vallarta | Chef & Staff | Casa La Playa",
     template: "%s | Casa La Playa Puerto Vallarta",
   },
-  description: "Casa La Playa Puerto Vallarta is a fully staffed 8-bedroom beachfront villa on Playa Camarones, a 10-minute walk to the Malecón. Private chef, pools, sleeps 16.",
+  description: "Rent Casa La Playa, a private beachfront villa in downtown Puerto Vallarta. 6–8 bedrooms, chef and staff, two pools, and walkable location. Book direct.",
   metadataBase: new URL(site.url),
   openGraph: {
     siteName: site.name,
@@ -24,14 +24,14 @@ export const metadata: Metadata = {
     type: 'website',
     images: [{ url: site.ogImage, width: 1200, height: 630 }],
   },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-    },
-  },
+  robots:
+    process.env.VERCEL_ENV === "preview"
+      ? { index: false, follow: false }
+      : {
+          index: true,
+          follow: true,
+          googleBot: { index: true, follow: true },
+        },
   icons: {
     icon: [
       { url: '/favicon.ico' },

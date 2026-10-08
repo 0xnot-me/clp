@@ -2,12 +2,12 @@ import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
 import PageHeader from "@/components/page-header"
 import ContactForm from "@/components/contact-form"
-import { JsonLd, faqSchema } from "@/components/json-ld"
+import { JsonLd, breadcrumbSchema, faqSchema } from "@/components/json-ld"
 import { pageMetadata } from "@/lib/metadata"
 import { InstagramButton, ReelCard } from "@/components/vibe-reel"
 
 export const metadata = pageMetadata({
-  title: "Casa La Playa Puerto Vallarta FAQ | Rates, Chef, Food, Staff, Location",
+  title: "Casa La Playa FAQ | Pricing, Staff & Booking",
   description:
     "Answers about Casa La Playa Puerto Vallarta: location, guests, rates and taxes, the chef and food costs, staff, activities, tipping and how to book.",
   path: "/faq",
@@ -57,7 +57,7 @@ const groups: { title: string; faqs: Faq[] }[] = [
       },
       {
         q: "Does Casa La Playa have pools, air conditioning and Wi-Fi?",
-        a: "Yes. The villa has 2 pools and a jacuzzi, central air conditioning, Wi-Fi in every room, satellite TV with sports channels, 2 full kitchens and 2 kitchenettes, an elevator and parking for 2 cars.",
+        a: "Yes. The villa has 2 swimming pools, a reflecting pool and a jacuzzi, central air conditioning, Wi-Fi in every room, satellite TV with sports channels, 2 full kitchens and 2 kitchenettes, an elevator and parking for 2 cars.",
       },
       {
         q: "Will my cell phone work in Puerto Vallarta?",
@@ -95,6 +95,10 @@ const groups: { title: string; faqs: Faq[] }[] = [
       {
         q: "Do you offer discounts?",
         a: "Our rates are set to provide the best possible service and staffing. That said, every group is different, so call or text us at 310-986-2299 and we're happy to talk through your dates and needs.",
+      },
+      {
+        q: "Is Casa La Playa good for a family reunion?",
+        a: "Yes. That's what the house is built for. Groups of 6 to 16 stay together instead of splitting across hotel rooms. The dining table seats 16, the chef cooks family-style breakfast and lunch, two ground-floor rooms can convert to twin beds, and kids are welcome. Airport pickup is included when you book direct.",
       },
       {
         q: "Can we book Casa La Playa for a company retreat?",
@@ -174,6 +178,7 @@ export default function FaqPage() {
   return (
     <main>
       <JsonLd data={faqSchema(faqs)} />
+      <JsonLd data={breadcrumbSchema("FAQ", "/faq")} />
       <Navbar />
       <PageHeader title="Frequently Asked Questions" />
       <div className="container mx-auto px-4 py-16">

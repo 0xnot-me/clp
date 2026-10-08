@@ -4,10 +4,11 @@ import PageHeader from "@/components/page-header"
 import Image from "next/image"
 import ContactForm from "@/components/contact-form"
 import FactSheet from "@/components/fact-sheet"
+import { JsonLd, breadcrumbSchema } from "@/components/json-ld"
 import { pageMetadata } from "@/lib/metadata"
 
 export const metadata = pageMetadata({
-  title: "About Casa La Playa | Staffed Beachfront Villa in Puerto Vallarta",
+  title: "Casa La Playa | Private 8-Bedroom Beachfront Villa",
   description:
     "Casa La Playa is a 20,000 sq ft, 8-suite beachfront villa on Playa Camarones in downtown Puerto Vallarta with a private chef, maids, night watchman and concierge.",
   path: "/about",
@@ -16,6 +17,7 @@ export const metadata = pageMetadata({
 export default function AboutPage() {
   return (
     <main>
+      <JsonLd data={breadcrumbSchema("About", "/about")} />
       <Navbar />
       <PageHeader title="About Casa La Playa" />
       <div className="min-h-screen">
@@ -56,8 +58,8 @@ export default function AboutPage() {
                 <p className="text-lg leading-relaxed mb-6">
                   Expansive windows in every room offer stunning views of the Puerto Vallarta sunset right over 
                   Banderas Bay, while spacious outdoor living areas offer the fresh ocean breeze. Aquatic 
-                  relaxation is always within reach with a large pool on the ground floor, a small pool at penthouse 
-                  level, a plunge pool on the second floor, and a neighboring sandy beach that harbors 
+                  relaxation is always within reach with a large pool on the ground floor, a small pool at penthouse
+                  level, a reflecting pool on the second floor, a jacuzzi, and a neighboring sandy beach that harbors 
                   breathtaking views.
                 </p>
 

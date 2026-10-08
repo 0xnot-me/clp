@@ -6,11 +6,12 @@ import Footer from "@/components/footer"
 import PageHeader from "@/components/page-header"
 import ContactForm from "@/components/contact-form"
 import QuoteCta from "@/components/quote-cta"
+import { JsonLd, breadcrumbSchema } from "@/components/json-ld"
 import { pageMetadata } from "@/lib/metadata"
 import { holidayRates, rentalOptions, usd } from "@/lib/site"
 
 export const metadata = pageMetadata({
-  title: "Casa La Playa Rates | 6–8 Bedroom Beachfront Villa, Puerto Vallarta",
+  title: "Puerto Vallarta Villa Rental Rates | 6–8 Bedrooms",
   description:
     "Nightly rates for Casa La Playa Puerto Vallarta: 6 bedrooms $3,200, 7 bedrooms $4,000, full 8-bedroom house $5,000. Chef and full staff included. Sleeps 16.",
   path: "/rates",
@@ -27,7 +28,7 @@ const included = [
   { icon: Sparkles, label: "Two maids, daily housekeeping" },
   { icon: ShieldCheck, label: "Night watchman" },
   { icon: ConciergeBell, label: "Bilingual concierge" },
-  { icon: Waves, label: "2 pools, jacuzzi, on the beach" },
+  { icon: Waves, label: "2 pools, reflecting pool, jacuzzi" },
   { icon: BedDouble, label: "Oceanfront suites with private baths" },
   { icon: Car, label: "Airport pickup when you book direct" },
   { icon: GlassWater, label: "Welcome drinks on arrival" },
@@ -45,6 +46,7 @@ const photos = [
 export default function RatesPage() {
   return (
     <main>
+      <JsonLd data={breadcrumbSchema("Rates", "/rates")} />
       <Navbar />
       <PageHeader title="Rates" />
       <div className="container mx-auto px-4 py-8 lg:py-16">
@@ -105,10 +107,17 @@ export default function RatesPage() {
               </div>
             </section>
 
-            <section className="text-base text-gray-600 space-y-1">
-              <p>Rates are subject to 19% hotel and local taxes and may change until your booking is confirmed.</p>
-              <p>Christmas and New Year&apos;s require the full 8 bedrooms with a 1-week minimum.</p>
-              <p>Groceries and dinner chef service are extra. See <Link href="/dining" className="underline">dining</Link> and the <Link href="/faq" className="underline">FAQ</Link>.</p>
+            <section>
+              <h2 className="text-2xl font-bold mb-4">What&apos;s extra</h2>
+              <ul className="text-lg space-y-2 list-disc pl-5">
+                <li>19% hotel and local taxes on the rental rate</li>
+                <li>Groceries and drinks, about $20–$60 per person per day, paid in cash</li>
+                <li>Dinner chef service, if you want it</li>
+                <li>Recommended staff tip: 10–15% or more of the rental rate before taxes</li>
+              </ul>
+              <p className="text-base text-gray-600 mt-4">
+                Christmas and New Year&apos;s require the full 8 bedrooms with a 1-week minimum. Rates may change until your booking is confirmed. See <Link href="/dining" className="underline">dining</Link> and the <Link href="/faq" className="underline">FAQ</Link>.
+              </p>
             </section>
           </div>
 

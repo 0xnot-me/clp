@@ -44,10 +44,12 @@ export default function Footer() {
           <p className="text-xl font-medium text-white">Book Your Dream Vacation Today</p>
           <p><a href={site.telHref} className="hover:text-white">{site.phoneDisplay}</a> · <a href={site.smsHref} className="hover:text-white underline">Text us</a></p>
           <p><a href={`mailto:${site.email}`} className="hover:text-white">{site.email}</a></p>
-          <div className="pt-2">
+          <div className="pt-2 flex items-center gap-4">
             <a href={site.instagram} className="hover:text-white" aria-label="Casa La Playa on Instagram" target="_blank" rel="noopener">
               <InstagramIcon className="w-6 h-6" />
             </a>
+            <a href={site.vrbo8Bedroom} className="hover:text-white underline" target="_blank" rel="noopener noreferrer">Vrbo</a>
+            <a href={site.airbnb} className="hover:text-white underline" target="_blank" rel="noopener noreferrer">Airbnb</a>
           </div>
         </div>
       </div>
