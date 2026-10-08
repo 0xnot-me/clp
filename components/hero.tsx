@@ -1,32 +1,29 @@
 'use client'
 
-import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import Navbar from "./navbar"
 import { rentalOptions, usd } from "@/lib/site"
 
 export default function Hero() {
-  const [videoReady, setVideoReady] = useState(false)
-
   return (
     <div className="relative h-screen w-full">
-      <div className="absolute inset-0 overflow-hidden bg-black">
+      <div className="absolute inset-0 overflow-hidden">
         <Image
           src="/hero-poster.jpg"
-          alt="Casa La Playa on Playa Camarones, Puerto Vallarta"
+          alt=""
           fill
           priority
           sizes="100vw"
           className="object-cover object-center"
+          aria-hidden="true"
         />
         <iframe
           src="https://player.vimeo.com/video/358145420?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1&preload=auto"
-          className={`absolute top-1/2 left-1/2 md:h-[120%] md:w-[120%] h-auto w-auto min-w-[250%] min-h-[250%] md:min-w-full md:min-h-full object-cover transform -translate-x-1/2 -translate-y-1/2 md:scale-100 scale-[1.75] transition-opacity duration-500 ${videoReady ? "opacity-100" : "opacity-0"}`}
+          className="absolute top-1/2 left-1/2 md:h-[120%] md:w-[120%] h-auto w-auto min-w-[250%] min-h-[250%] md:min-w-full md:min-h-full object-cover transform -translate-x-1/2 -translate-y-1/2 md:scale-100 scale-[1.75]"
           allow="autoplay; fullscreen"
           title="Video tour of Casa La Playa beachfront villa in Puerto Vallarta"
           frameBorder="0"
-          onLoad={() => setVideoReady(true)}
         />
         <div className="absolute inset-0 bg-black/30" />
       </div>
