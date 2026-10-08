@@ -65,6 +65,10 @@ const groups: { title: string; faqs: Faq[] }[] = [
     title: "Rates and Booking",
     faqs: [
       {
+        q: "What if my group is bigger than the house?",
+        a: "Believe it or not, people have a lot of friends! Friends who aren't staying at the house are welcome to come hang out for the day for a day fee, which compensates the staff for the extra work. We keep the numbers in check because too many people strains the experience for everyone. We can help you find hotels nearby for the rest of your friends, and if you have a really big group, we can help you find another home close by too.",
+      },
+      {
         q: "Can we rent only part of the villa?",
         a: "Yes. You can rent 6 bedrooms, 7 bedrooms or the full 8-bedroom house. We only rent to one group at a time, so you never share the villa with strangers.",
       },

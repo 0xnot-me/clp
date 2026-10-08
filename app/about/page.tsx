@@ -47,7 +47,7 @@ export default function AboutPage() {
                   Natural beauty and contemporary elegance come together in this ideally located three-story 
                   villa which features swimming pools, reflecting pools, and lush ground-level and rooftop 
                   gardens that serve to add to the ambiance of a serene tropical sanctuary. It offers an 
-                  unforgettable backdrop for retreats, family vacations, honeymoons, weddings, and much more. 
+                  unforgettable backdrop for family vacations, group trips with friends, company retreats and much more. 
                   Book your stay at Casa La Playa and you will easily forget that this beautiful Mexican villa is just 
                   a short walk away from countless shops, restaurants, and many other cultural offerings right in 
                   downtown Puerto Vallarta, Mexico.
@@ -97,8 +97,8 @@ export default function AboutPage() {
                 </p>
 
                 <p className="text-lg leading-relaxed mb-6">
-                  This beautiful Mexican villa is ideal for those seeking a luxury vacation, a memorable wedding 
-                  venue, or a one-of-a-kind venue for any other special event.
+                  This beautiful Mexican villa is ideal for family vacations, group trips with friends and company
+                  retreats.
                 </p>
 
                 <p className="text-lg leading-relaxed mb-6">
