@@ -11,6 +11,7 @@ const pages = [
   { path: "/amenities", priority: 0.7 },
   { path: "/dining", priority: 0.7 },
   { path: "/sample-menu", priority: 0.5 },
+  { path: "/reviews", priority: 0.6 },
   { path: "/activities", priority: 0.5 },
   { path: "/contact", priority: 0.7 },
 ]

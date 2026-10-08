@@ -1,34 +1,45 @@
-import { site } from "@/lib/site"
+import Link from "next/link"
+import { GoogleG, VrboLogo } from "@/components/review-source-logos"
+import { reviewSheets } from "@/lib/reviews"
 
-const listings = [
-  { label: "8-bedroom on Vrbo", href: site.vrbo8Bedroom },
-  { label: "6-bedroom on Vrbo", href: site.vrbo6Bedroom },
-  { label: "Airbnb", href: site.airbnb },
-]
+const vrboSheets = reviewSheets.filter((sheet) => sheet.id !== "google")
+const googleSheet = reviewSheets.find((sheet) => sheet.id === "google")
 
 export default function GuestReviews() {
   return (
-    <section className="py-12 bg-gray-50">
-      <div className="container mx-auto px-4 text-center max-w-3xl">
-        <h2 className="text-3xl font-black">Guest reviews</h2>
-        <p className="mt-4 text-lg text-gray-700">
-          Casa La Playa is independently listed and reviewed on Vrbo and Airbnb. Read those reviews
-          before you book. The house, staff and location are the same whether you book there or
-          directly with us.
-        </p>
-        <div className="mt-6 flex flex-wrap justify-center gap-3">
-          {listings.map((l) => (
-            <a
-              key={l.href}
-              href={l.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block border-2 border-black px-5 py-3 font-semibold"
+    <section className="py-10 bg-gray-50">
+      <div className="container mx-auto px-4 max-w-xl">
+        <h2 className="text-2xl sm:text-3xl font-black text-center">Guest reviews</h2>
+        <p className="mt-2 text-base sm:text-lg text-gray-700 text-center">Read some of our reviews</p>
+
+        <div className="mt-6 grid grid-cols-2 gap-3">
+          {vrboSheets.map((sheet) => (
+            <Link
+              key={sheet.id}
+              href={`/reviews#${sheet.id}`}
+              className="rounded-lg border bg-white p-3 sm:p-4 hover:shadow-md transition-shadow"
             >
-              {l.label}
-            </a>
+              <VrboLogo className="text-[20px] sm:text-[22px]" />
+              <h3 className="mt-3 text-sm sm:text-base font-bold leading-snug">{sheet.title}</h3>
+              <p className="mt-1 text-xs sm:text-sm text-gray-600">{sheet.blurb}</p>
+              <span className="inline-block mt-2 text-sm font-semibold underline">Read the reviews</span>
+            </Link>
           ))}
         </div>
+
+        {googleSheet && (
+          <Link
+            href={`/reviews#${googleSheet.id}`}
+            className="mt-3 flex items-center gap-3 rounded-lg border bg-white p-3 sm:p-4 hover:shadow-md transition-shadow"
+          >
+            <GoogleG className="h-7 w-7 shrink-0" />
+            <span className="min-w-0">
+              <span className="block text-sm sm:text-base font-bold">Google Reviews</span>
+              <span className="text-xs sm:text-sm text-gray-600">{googleSheet.blurb}</span>
+              <span className="block text-sm font-semibold underline">Read the reviews</span>
+            </span>
+          </Link>
+        )}
       </div>
     </section>
   )

@@ -10,6 +10,7 @@ export const site = {
   instagram: "https://www.instagram.com/casalaplaya/",
   vrbo8Bedroom: "https://www.vrbo.com/906203",
   vrbo6Bedroom: "https://www.vrbo.com/405807",
+  googleMaps: "https://www.google.com/maps?cid=14387831894672918392",
   airbnb: "https://www.airbnb.com/rooms/20475507",
   address: {
     street: "Calle Paraguay 1201",

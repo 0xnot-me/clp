@@ -44,7 +44,7 @@ export const vacationRentalSchema = {
     postalCode: site.address.postalCode,
     addressCountry: site.address.country,
   },
-  sameAs: [site.instagram, site.vrbo8Bedroom, site.vrbo6Bedroom, site.airbnb],
+  sameAs: [site.instagram, site.vrbo8Bedroom, site.vrbo6Bedroom, site.airbnb, site.googleMaps],
   containsPlace: {
     "@type": "Accommodation",
     additionalType: "EntirePlace",

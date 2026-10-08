@@ -41,7 +41,7 @@ const groups: { title: string; faqs: Faq[] }[] = [
       },
       {
         q: "How many bedrooms and bathrooms are there?",
-        a: "There are 8 oceanfront bedroom suites, 8 full bathrooms and 2 half baths across 20,000 square feet on three floors, connected by an elevator.",
+        a: "There are 8 oceanfront bedroom suites, 8 full bathrooms and 2 half baths on three floors, connected by an elevator. The full house is about 20,000 square feet. You can rent it as 6, 7, or all 8 bedrooms depending on the group.",
       },
       {
         q: "What size are the beds?",
@@ -74,7 +74,7 @@ const groups: { title: string; faqs: Faq[] }[] = [
       },
       {
         q: "Can we rent only part of the villa?",
-        a: "Yes. You can rent 6 bedrooms, 7 bedrooms or the full 8-bedroom house. We only rent to one group at a time, so you never share the villa with strangers.",
+        a: "Yes. You can rent 6 bedrooms (about 16,000 square feet), 7 bedrooms (about 18,000 square feet), or the full 8-bedroom house (about 20,000 square feet). We only rent to one group at a time, so you never share the villa with strangers.",
       },
       {
         q: "How much does Casa La Playa cost per night?",

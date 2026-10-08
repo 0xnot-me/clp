@@ -13,6 +13,7 @@ const footerLinks = [
   { label: "Amenities", href: "/amenities" },
   { label: "Activities", href: "/activities" },
   { label: "FAQ", href: "/faq" },
+  { label: "Reviews", href: "/reviews" },
   { label: "Contact", href: "/contact" },
 ]
 
@@ -48,8 +49,6 @@ export default function Footer() {
             <a href={site.instagram} className="hover:text-white" aria-label="Casa La Playa on Instagram" target="_blank" rel="noopener">
               <InstagramIcon className="w-6 h-6" />
             </a>
-            <a href={site.vrbo8Bedroom} className="hover:text-white underline" target="_blank" rel="noopener noreferrer">Vrbo</a>
-            <a href={site.airbnb} className="hover:text-white underline" target="_blank" rel="noopener noreferrer">Airbnb</a>
           </div>
         </div>
       </div>
