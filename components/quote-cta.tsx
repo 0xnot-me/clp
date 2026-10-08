@@ -18,7 +18,7 @@ export default function QuoteCta() {
       <p className="mt-4 text-base">
         Prefer email? <a href="#inquiry" className="underline font-medium">Send us your dates</a>
       </p>
-      <p className="mt-4 text-base text-gray-600">Book direct and pay no booking-site service fees.</p>
+      <p className="mt-4 text-base text-gray-600">Book direct: no booking-site fees, and airport pickup is included.</p>
     </section>
   )
 }

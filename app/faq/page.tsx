@@ -33,7 +33,7 @@ const groups: { title: string; faqs: Faq[] }[] = [
       },
       {
         q: "How far is Casa La Playa from the Puerto Vallarta airport?",
-        a: "Puerto Vallarta International Airport (PVR) is 15–20 minutes by car, south toward town.",
+        a: "Puerto Vallarta International Airport (PVR) is 15–20 minutes by car. Airport pickup is included when you book directly with us. If your group arrives at different times, just take a taxi and we'll reimburse you.",
       },
       {
         q: "How many guests does Casa La Playa sleep?",
@@ -42,6 +42,14 @@ const groups: { title: string; faqs: Faq[] }[] = [
       {
         q: "How many bedrooms and bathrooms are there?",
         a: "There are 8 oceanfront bedroom suites, 8 full bathrooms and 2 half baths across 20,000 square feet on three floors, connected by an elevator.",
+      },
+      {
+        q: "What size are the beds?",
+        a: "Most suites have king beds, and two rooms can be set up as either one king or two twin beds. One smaller bedroom has no view and its own entrance. Tell us about your group and we'll set up the beds to fit.",
+      },
+      {
+        q: "Are children welcome?",
+        a: "Yes, families are welcome. Just let us know how many adults and children are coming and their ages, so we can set up the right beds and have the staff and house ready for your kids, including around the pools.",
       },
       {
         q: "Does Casa La Playa have pools, air conditioning and Wi-Fi?",
@@ -74,7 +82,15 @@ const groups: { title: string; faqs: Faq[] }[] = [
       },
       {
         q: "Is it cheaper to book Casa La Playa directly?",
-        a: "Yes. When you book directly with us there are no booking-site service fees, which typically add 4–12% on booking sites. It's the same house, the same staff and the same nightly rates.",
+        a: "Yes. When you book directly with us there are no booking-site service fees, which typically add 4–12% on booking sites. It's the same house, the same staff and the same nightly rates, plus airport pickup is included when you book direct.",
+      },
+      {
+        q: "Do you offer discounts?",
+        a: "Our rates are set to provide the best possible service and staffing. That said, every group is different, so call or text us at 310-986-2299 and we're happy to talk through your dates and needs.",
+      },
+      {
+        q: "Can we book Casa La Playa for a company retreat?",
+        a: "Yes. Company and team retreats are a great fit. The whole villa is private to your group, with plenty of space to meet, and the chef and staff take care of meals and housekeeping. Retreats follow the same 16-guest limit and house rules as any stay.",
       },
     ],
   },
@@ -91,7 +107,7 @@ const groups: { title: string; faqs: Faq[] }[] = [
       },
       {
         q: "How does grocery shopping and payment for food work?",
-        a: "The chef and her team do all the shopping for you, usually daily, and our house manager, Paz, provides receipts. Food and drinks are paid for in cash during your stay. Many groups give Paz a lump sum up front and she checks in with the group leader as it's spent. At this time we don't accept credit cards for food and drinks. There are ATMs nearby and Paz can point you to one.",
+        a: "The chef and her team do all the shopping for you, usually daily, and our house manager, Paz, provides receipts. Food and drinks are paid for in cash during your stay. Many groups give Paz a lump sum up front and she checks in with the group leader as it's spent. At this time we don't accept credit cards for food and drinks. There are ATMs nearby and Paz can point you to one. You're welcome to visit the local markets too, but the staff handles the shopping so you don't have to.",
       },
       {
         q: "Can we have the chef cook dinner?",

@@ -17,6 +17,10 @@ export default function ContactForm() {
       last_name: form.lastName.value,
       email: form.email.value,
       phone: form.phone.value,
+      arrival_date: form.arrival.value,
+      nights: form.nights.value,
+      adults: form.adults.value,
+      children: form.kids.value,
       message: form.message.value,
     }
 
@@ -74,6 +78,7 @@ export default function ContactForm() {
             className="w-full px-4 py-3 text-base border rounded bg-white"
             required
           />
+          <p className="mt-1 text-sm text-gray-500">Double-check your email so we can reply.</p>
         </div>
         <div>
           <input
@@ -84,14 +89,30 @@ export default function ContactForm() {
             required
           />
         </div>
+        <div className="grid grid-cols-2 gap-3">
+          <label className="col-span-2 text-sm text-gray-600">
+            Arrival date
+            <input name="arrival" type="date" className="mt-1 w-full px-4 py-3 text-base border rounded bg-white" required />
+          </label>
+          <label className="text-sm text-gray-600">
+            Nights
+            <input name="nights" type="number" min={1} inputMode="numeric" className="mt-1 w-full px-4 py-3 text-base border rounded bg-white" required />
+          </label>
+          <label className="text-sm text-gray-600">
+            Adults
+            <input name="adults" type="number" min={1} max={16} inputMode="numeric" className="mt-1 w-full px-4 py-3 text-base border rounded bg-white" required />
+          </label>
+          <label className="col-span-2 text-sm text-gray-600">
+            Children (and ages)
+            <input name="kids" type="text" placeholder="e.g. 2 kids, ages 5 and 9" className="mt-1 w-full px-4 py-3 text-base border rounded bg-white" />
+          </label>
+        </div>
         <div>
           <textarea
-           
             name="message"
-            placeholder="Message: Dates and Reservation Details"
-            rows={4}
+            placeholder="Anything else? Special occasion, flexible dates, questions"
+            rows={3}
             className="w-full px-4 py-3 text-base border rounded bg-white"
-            required
           ></textarea>
         </div>
         <button

@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import { BedDouble, ChefHat, ConciergeBell, ShieldCheck, Sparkles, Waves } from "lucide-react"
+import { BedDouble, ChefHat, Car, ConciergeBell, GlassWater, ShieldCheck, Sparkles, Waves } from "lucide-react"
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
 import PageHeader from "@/components/page-header"
@@ -29,6 +29,8 @@ const included = [
   { icon: ConciergeBell, label: "Bilingual concierge" },
   { icon: Waves, label: "2 pools, jacuzzi, on the beach" },
   { icon: BedDouble, label: "Oceanfront suites with private baths" },
+  { icon: Car, label: "Airport pickup when you book direct" },
+  { icon: GlassWater, label: "Welcome drinks on arrival" },
 ]
 
 const photos = [
