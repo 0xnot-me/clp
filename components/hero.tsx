@@ -1,23 +1,14 @@
 'use client'
 
 import Link from "next/link"
-import Image from "next/image"
 import Navbar from "./navbar"
 import { rentalOptions, usd } from "@/lib/site"
 
 export default function Hero() {
   return (
     <div className="relative h-screen w-full">
+      {/* Video background contained within hero section */}
       <div className="absolute inset-0 overflow-hidden">
-        <Image
-          src="/hero-poster.jpg"
-          alt=""
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover object-center"
-          aria-hidden="true"
-        />
         <iframe
           src="https://player.vimeo.com/video/358145420?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1&preload=auto"
           className="absolute top-1/2 left-1/2 md:h-[120%] md:w-[120%] h-auto w-auto min-w-[250%] min-h-[250%] md:min-w-full md:min-h-full object-cover transform -translate-x-1/2 -translate-y-1/2 md:scale-100 scale-[1.75]"
