@@ -45,7 +45,7 @@ const groups: { title: string; faqs: Faq[] }[] = [
       },
       {
         q: "What size are the beds?",
-        a: "Most suites have king beds, including the 2 king beds in the penthouse. Two rooms on the ground floor can be switched from a king bed to two twin beds, which is great for friends sharing a room. One smaller bedroom has no view and its own entrance. Tell us about your group and we'll set up the beds to fit.",
+        a: "Most suites have king beds, including the 2 king beds in the penthouse. Two rooms on the ground floor can be switched from a king bed to two twin beds, which is great for friends sharing a room. Tell us about your group and we'll set up the beds to fit.",
       },
       {
         q: "Are children welcome?",
@@ -90,7 +90,7 @@ const groups: { title: string; faqs: Faq[] }[] = [
       },
       {
         q: "Can we book Casa La Playa for a company retreat?",
-        a: "Yes. Company and team retreats are a great fit. The whole villa is private to your group, with plenty of space to meet, and the chef and staff take care of meals and housekeeping. Retreats follow the same 16-guest limit and house rules as any stay.",
+        a: "Yes. Company and team retreats are a great fit. The whole villa is private to your group, with plenty of space to meet, and the chef and staff take care of meals and housekeeping. Retreats follow the same 16-guest limit as any stay.",
       },
     ],
   },
@@ -128,7 +128,7 @@ const groups: { title: string; faqs: Faq[] }[] = [
       },
       {
         q: "What happens when we arrive?",
-        a: "You'll get a tour of the house, meet the staff and be welcomed with drinks (margaritas, beer and fresh fruit waters) and Mexican appetizers. Paz will go over the house guide and the few house rules we have.",
+        a: "You'll get a tour of the house, meet the staff and be welcomed with drinks (margaritas, beer and fresh fruit waters) and Mexican appetizers. Paz will walk you through the house guide.",
       },
       {
         q: "What activities can we book?",
@@ -137,6 +137,14 @@ const groups: { title: string; faqs: Faq[] }[] = [
       {
         q: "Can we get massages or spa services at the house?",
         a: "Yes. Our preferred vendors make house calls for massages, hair, makeup, manicures and pedicures. Paz has a menu of services and will help you schedule.",
+      },
+      {
+        q: "Are there a lot of house rules?",
+        a: "Not really. We're super chill. Have fun, be smart and don't do anything foolish. We want you to have an amazing experience.",
+      },
+      {
+        q: "Who owns Casa La Playa?",
+        a: "Casa La Playa has been owned by the same family for more than 25 years. We hire everyone locally, support local businesses and source as much as we can from the community. Be a good member of the community and everyone will treat you with respect. At the end of the day, we're all one.",
       },
       {
         q: "What if someone needs a doctor?",

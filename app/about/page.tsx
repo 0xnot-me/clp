@@ -89,6 +89,14 @@ export default function AboutPage() {
                 </p>
 
                 <p className="text-lg leading-relaxed mb-6">
+                  We&apos;ve owned Casa La Playa for more than 25 years. We hire everyone locally, support local
+                  businesses and source as much as we can from the community. As for house rules, there really
+                  aren&apos;t any: have fun, be smart and don&apos;t do anything foolish. We&apos;re super chill and we
+                  want you to have an experience. Be a good member of the community and everyone will treat you with
+                  respect. At the end of the day, we&apos;re all one.
+                </p>
+
+                <p className="text-lg leading-relaxed mb-6">
                   This beautiful Mexican villa is ideal for those seeking a luxury vacation, a memorable wedding 
                   venue, or a one-of-a-kind venue for any other special event.
                 </p>
