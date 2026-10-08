@@ -45,6 +45,9 @@ export const holidayRates = {
   christmasMinNights: 7,
 }
 
+export const taxRate = 0.19
+export const taxLabel = "19% hotel and local taxes"
+
 export const usd = (n: number) =>
   n.toLocaleString("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 })
 

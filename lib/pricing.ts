@@ -1,4 +1,4 @@
-import { holidayRates, rentalOptions, type Bedrooms } from "./site"
+import { holidayRates, rentalOptions, taxRate, type Bedrooms } from "./site"
 
 const DAY = 86_400_000
 
@@ -46,6 +46,8 @@ export type Quote = {
   bedrooms: Bedrooms
   lines: { label: string; nights: number; rate: number; total: number }[]
   subtotal: number
+  tax: number
+  total: number
   averageNightly: number
   notices: string[]
 }
@@ -78,5 +80,6 @@ export function quoteStay(checkIn: number, checkOut: number, requested: Bedrooms
     .map((l) => ({ ...l, total: l.nights * l.rate }))
 
   const subtotal = lines.reduce((sum, l) => sum + l.total, 0)
-  return { nights, bedrooms, lines, subtotal, averageNightly: subtotal / nights, notices }
+  const tax = Math.round(subtotal * taxRate)
+  return { nights, bedrooms, lines, subtotal, tax, total: subtotal + tax, averageNightly: subtotal / nights, notices }
 }

@@ -1,7 +1,7 @@
 "use client"
 
 import { useMemo, useState } from "react"
-import { rentalOptions, site, usd, type Bedrooms } from "@/lib/site"
+import { rentalOptions, site, taxLabel, taxRate, usd, type Bedrooms } from "@/lib/site"
 import { parseDate, quoteStay, suggestedBedrooms } from "@/lib/pricing"
 import { PREFILL_EVENT } from "./contact-form"
 
@@ -23,7 +23,8 @@ export default function RateCalculator() {
   }, [checkIn, checkOut, bedrooms])
 
   const nightly = quote ? quote.averageNightly : option.nightly
-  const perGuest = guests > 0 ? nightly / guests : null
+  const nightlyWithTax = nightly * (1 + taxRate)
+  const perGuest = guests > 0 ? nightlyWithTax / guests : null
 
   function changeGuests(value: number) {
     setGuests(value)
@@ -35,7 +36,7 @@ export default function RateCalculator() {
       `I'd like to check availability for the ${quote?.bedrooms ?? bedrooms}-bedroom option.`,
       `Guests: ${guests}`,
       checkIn && checkOut ? `Dates: ${checkIn} to ${checkOut} (${quote?.nights ?? "?"} nights)` : "Dates: flexible",
-      quote ? `Estimated subtotal from the website: ${usd(quote.subtotal)} before taxes` : "",
+      quote ? `Website estimate: ${usd(quote.subtotal)} + ${usd(quote.tax)} taxes = ${usd(quote.total)}` : "",
     ]
       .filter(Boolean)
       .join("\n")
@@ -120,10 +121,18 @@ export default function RateCalculator() {
                   <dd>{usd(l.total)}</dd>
                 </div>
               ))}
+              <div className="flex justify-between gap-4 border-t pt-1 mt-1">
+                <dt>Subtotal</dt>
+                <dd>{usd(quote.subtotal)}</dd>
+              </div>
+              <div className="flex justify-between gap-4">
+                <dt>{taxLabel}</dt>
+                <dd>{usd(quote.tax)}</dd>
+              </div>
             </dl>
             <div className="flex justify-between items-baseline border-t mt-3 pt-3">
-              <span className="font-semibold">Estimated total for {quote.nights} {quote.nights === 1 ? "night" : "nights"}</span>
-              <span className="text-3xl font-bold">{usd(quote.subtotal)}</span>
+              <span className="font-semibold">Estimated total for {quote.nights} {quote.nights === 1 ? "night" : "nights"}, including taxes</span>
+              <span className="text-3xl font-bold">{usd(quote.total)}</span>
             </div>
             {quote.notices.map((n) => (
               <p key={n} className="mt-3 text-sm text-amber-800">{n}</p>
@@ -135,15 +144,20 @@ export default function RateCalculator() {
             <span className="text-3xl font-bold">{usd(option.nightly)}</span>
           </div>
         )}
+        {!quote && (
+          <p className="mt-1 text-sm text-gray-600">
+            {usd(nightlyWithTax)} per night including {taxLabel}. Add your dates for a full total.
+          </p>
+        )}
         {perGuest && !tooMany && (
           <p className="mt-2 text-sm text-gray-600">
-            That&apos;s about <strong>{usd(perGuest)} per guest per night</strong> for {guests} guests, including the
-            chef, maids, night watchman and concierge.
+            That&apos;s about <strong>{usd(perGuest)} per guest per night</strong> for {guests} guests, including taxes,
+            the chef, maids, night watchman and concierge.
           </p>
         )}
         <p className="mt-3 text-xs text-gray-500">
-          Before Mexican federal and local hotel taxes. Groceries and optional dinner service are extra. Rates are
-          subject to change until your booking is confirmed.
+          Groceries and optional dinner service are extra. Rates are subject to change until your booking is
+          confirmed.
         </p>
       </div>
 

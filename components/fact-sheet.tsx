@@ -11,7 +11,7 @@ export default function FactSheet() {
     ["Staff", staff.join("; ")],
     ["Meals", "Breakfast and lunch chef service included; dinner available for a fee; guests reimburse groceries"],
     ["Distances", "About a 10-minute walk to the Malecón; 15–20 minutes by car to Puerto Vallarta airport (PVR)"],
-    ["Rates", `${site.priceRange} plus Mexican taxes`],
+    ["Rates", `${site.priceRange} plus 19% hotel and local taxes`],
   ]
 
   return (

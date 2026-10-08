@@ -66,7 +66,7 @@ export default function RatesPage() {
                 </div>
 
                 <p className="text-gray-600 text-sm mt-4">
-                  Note: Until confirmed, rates are subject to change without notice. The villa accommodates 16 guests maximum. The above rates include a full housekeeping staff and chef. Restrictions may apply. All rates are subject to Mexican Federal Tax and Local Hotel Tax.
+                  Note: Until confirmed, rates are subject to change without notice. The villa accommodates 16 guests maximum. The above rates include a full housekeeping staff and chef. Restrictions may apply. All rates are subject to 19% hotel and local taxes.
                 </p>
                 
                 <div className="space-y-1 mt-2 text-gray-600 text-sm font-bold">
