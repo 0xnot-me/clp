@@ -5,66 +5,40 @@ import Link from "next/link"
 import Navbar from "./navbar"
 import { rentalOptions, usd } from "@/lib/site"
 
-function armVideo(video: HTMLVideoElement) {
-  video.defaultMuted = true
-  video.muted = true
-  video.playsInline = true
-  video.setAttribute("muted", "")
-  video.setAttribute("playsinline", "true")
-  video.setAttribute("webkit-playsinline", "true")
-  const play = () => {
-    video.muted = true
-    void video.play().catch(() => {})
-  }
-  play()
-  video.addEventListener("loadedmetadata", play)
-  video.addEventListener("loadeddata", play)
-  video.addEventListener("canplay", play)
-}
+const HERO_VIDEO_HTML = `<video autoplay muted loop playsinline webkit-playsinline preload="auto" poster="/hero-poster.jpg" src="/hero-loop.mp4" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></video>`
 
 export default function Hero() {
-  const videoRef = useRef<HTMLVideoElement>(null)
+  const boxRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    const video = videoRef.current
+    const video = boxRef.current?.querySelector("video")
     if (!video) return
-    armVideo(video)
+    video.muted = true
+    video.defaultMuted = true
+    video.playsInline = true
     const play = () => {
       video.muted = true
       void video.play().catch(() => {})
     }
+    play()
+    video.addEventListener("canplay", play)
     const kick = () => play()
     window.addEventListener("touchstart", kick, { passive: true })
     window.addEventListener("scroll", kick, { passive: true })
-    document.addEventListener("click", kick)
-    const onVisible = () => {
-      if (document.visibilityState === "visible") play()
-    }
-    document.addEventListener("visibilitychange", onVisible)
     return () => {
+      video.removeEventListener("canplay", play)
       window.removeEventListener("touchstart", kick)
       window.removeEventListener("scroll", kick)
-      document.removeEventListener("click", kick)
-      document.removeEventListener("visibilitychange", onVisible)
     }
   }, [])
 
   return (
     <div className="relative h-screen w-full">
       <div className="absolute inset-0 overflow-hidden bg-black">
-        <video
-          ref={videoRef}
-          className="absolute inset-0 h-full w-full object-cover"
-          src="/hero-flyover.mp4"
-          poster="/hero-poster.jpg"
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
-          controls={false}
-          disablePictureInPicture
-          disableRemotePlayback
+        <div
+          ref={boxRef}
+          className="absolute inset-0"
+          dangerouslySetInnerHTML={{ __html: HERO_VIDEO_HTML }}
         />
         <div className="absolute inset-0 bg-black/30" />
       </div>
