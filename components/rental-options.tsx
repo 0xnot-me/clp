@@ -13,21 +13,14 @@ export default function RentalOptions() {
     <section className="py-16">
       <div className="container mx-auto px-4">
         <p className="text-center max-w-4xl mx-auto text-lg leading-relaxed tracking-wide mb-16">
-          Casa La Playa is a private beachfront villa rental in Puerto Vallarta, Mexico, set directly on Playa
-          Camarones in downtown, about a 10-minute walk to the Malecón. The 20,000 sq ft villa has 8 bedroom suites,
-          8 full and 2 half bathrooms, 2 pools and a jacuzzi, and you can rent 6, 7 or all 8 bedrooms for up to 16
-          guests. A full staff, with a private chef, two housekeepers, a night watchman and a bilingual concierge,
-          takes care of everything, so your group can enjoy barefoot luxury, near-perfect weather and sunsets over
-          Banderas Bay every evening. It&apos;s ideal for family reunions, milestone celebrations and group
-          getaways, with Puerto Vallarta&apos;s best restaurants, shopping, art galleries and nightlife all within
-          walking distance.
+          Casa La Playa is a private beachfront villa rental in Puerto Vallarta, right on Playa Camarones and a
+          10-minute walk to the Malecón. Up to 16 guests, a private chef and full staff, and sunsets over Banderas
+          Bay every night.
         </p>
 
         <h2 className="text-3xl md:text-5xl font-black text-center mb-4">Rental Options &amp; Rates</h2>
         <p className="text-center text-gray-600 mb-12">
-          We rent to one group at a time. Every option includes a private chef for breakfast and lunch, daily
-          housekeeping, a night watchman and concierge. Book direct with us and skip the 4–12% service fees
-          booking sites charge.
+          One group at a time. Chef and staff included. Book direct and skip booking-site fees.
         </p>
 
         <div className="grid md:grid-cols-3 gap-8">

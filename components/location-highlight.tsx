@@ -6,22 +6,22 @@ const points = [
   {
     icon: Waves,
     title: "Right on the beach",
-    text: "Step out the door onto Playa Camarones for swimming, jet skis, parasailing and sunsets over Banderas Bay.",
+    text: "Step out the door onto Playa Camarones.",
   },
   {
     icon: Footprints,
     title: "Walk to everything",
-    text: "Restaurants, bars, nightclubs, art galleries, shopping and the Malecón are all walking distance. No car, no waiting on taxis.",
+    text: "Restaurants, bars, clubs, galleries and the Malecón. No car needed.",
   },
   {
     icon: Plane,
     title: "Close to the airport",
-    text: "Just 15–20 minutes from Puerto Vallarta International Airport, so you start your vacation sooner.",
+    text: "15–20 minutes from the Puerto Vallarta airport.",
   },
   {
     icon: Lock,
     title: "Complete privacy",
-    text: "We rent to one group at a time, with staff on site and a night watchman, so the whole villa is yours.",
+    text: "One group at a time. The whole villa is yours.",
   },
 ]
 
@@ -33,9 +33,8 @@ export default function LocationHighlight() {
           <p className="text-sm font-semibold tracking-[0.2em] uppercase text-gray-600">What makes Casa La Playa special</p>
           <h2 className="text-3xl md:text-5xl font-black mt-2">Location, Location, Location</h2>
           <p className="text-lg text-gray-700 mt-4 leading-relaxed">
-            Many Puerto Vallarta villas sit up in the hills or far from town, where every dinner, drink or outing means
-            a car or a taxi. At Casa La Playa you&apos;re on the beach and in the middle of everything, and when you
-            want to stay in, you have the whole place to yourselves.
+            Most villas are up in the hills, so every outing means a taxi. Here you&apos;re on the beach and walking
+            distance to everything, with total privacy when you stay in.
           </p>
         </div>
 

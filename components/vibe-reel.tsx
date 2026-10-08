@@ -15,8 +15,7 @@ export default function VibeReel() {
           <p className="text-sm font-semibold tracking-[0.2em] uppercase text-gray-600">See the vibe</p>
           <h2 className="text-3xl md:text-5xl font-black mt-2">What a Stay Feels Like</h2>
           <p className="text-lg text-gray-700 mt-4 leading-relaxed">
-            Sunsets from the terrace, the pool steps from the sand, and your own staff taking care of everything.
-            Travel creator @{REEL_CREATOR} called it &ldquo;the ultimate beachfront vacation home.&rdquo;
+            &ldquo;The ultimate beachfront vacation home.&rdquo; &mdash; @{REEL_CREATOR}
           </p>
           <p className="text-lg font-semibold mt-4">Want to see what the house is really like? Check out our Instagram.</p>
           <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
