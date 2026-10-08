@@ -11,7 +11,7 @@ export default function Hero() {
       {/* Video background contained within hero section */}
       <div className="absolute inset-0 overflow-hidden bg-black">
         <Image
-          src="/header.jpg"
+          src="/header2.jpg"
           alt=""
           fill
           priority
