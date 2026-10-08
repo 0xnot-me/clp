@@ -177,19 +177,16 @@ export default function GalleryGrid() {
           >
             →
           </button>
-          <div 
-            className="relative max-w-6xl max-h-[90vh] bg-white"
-            style={{
-              animation: 'scaleIn 0.1s ease-out'
-            }}
+          <div
+            className="relative max-w-[96vw] max-h-[92vh]"
+            style={{ animation: "scaleIn 0.1s ease-out" }}
+            onClick={(e) => e.stopPropagation()}
           >
-            <Image
+            {/* Native img so the lightbox can fill the screen instead of Next.js shrinking it. */}
+            <img
               src={selectedImage}
               alt={`Casa La Playa Puerto Vallarta, enlarged photo ${currentIndex + 1}`}
-              width={1200}
-              height={801}
-              sizes="(min-width: 1200px) 1152px, 100vw"
-              className="rounded-2xl max-h-[85vh] w-auto h-auto object-contain"
+              className="rounded-2xl max-h-[92vh] max-w-[96vw] w-auto h-auto object-contain"
             />
             <button
               className="absolute top-4 right-4 text-white bg-black bg-opacity-50 rounded-full w-10 h-10 flex items-center justify-center hover:bg-opacity-75 transition-all duration-200"
