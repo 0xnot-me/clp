@@ -8,20 +8,21 @@ import { rentalOptions, usd } from "@/lib/site"
 export default function Hero() {
   return (
     <div className="relative h-screen w-full">
+      {/* Video background contained within hero section */}
       <div className="absolute inset-0 overflow-hidden bg-black">
         <Image
           src="/header.jpg"
-          alt="Casa La Playa beachfront villa on Playa Camarones in Puerto Vallarta"
+          alt=""
           fill
           priority
           sizes="100vw"
           className="object-cover"
+          aria-hidden="true"
         />
         <iframe
-          src="https://player.vimeo.com/video/358145420?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1&playsinline=1"
-          className="hidden md:block absolute top-1/2 left-1/2 h-[120%] w-[120%] min-w-full min-h-full object-cover -translate-x-1/2 -translate-y-1/2"
+          src="https://player.vimeo.com/video/358145420?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1&preload=auto"
+          className="absolute top-1/2 left-1/2 md:h-[120%] md:w-[120%] h-auto w-auto min-w-[250%] min-h-[250%] md:min-w-full md:min-h-full object-cover transform -translate-x-1/2 -translate-y-1/2 md:scale-100 scale-[1.75]"
           allow="autoplay; fullscreen"
-          referrerPolicy="origin"
           title="Video tour of Casa La Playa beachfront villa in Puerto Vallarta"
           frameBorder="0"
         />
