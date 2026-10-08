@@ -45,7 +45,7 @@ const groups: { title: string; faqs: Faq[] }[] = [
       },
       {
         q: "What size are the beds?",
-        a: "Most suites have king beds, and two rooms can be set up as either one king or two twin beds. One smaller bedroom has no view and its own entrance. Tell us about your group and we'll set up the beds to fit.",
+        a: "Most suites have king beds, including the 2 king beds in the penthouse. Two rooms on the ground floor can be switched from a king bed to two twin beds, which is great for friends sharing a room. One smaller bedroom has no view and its own entrance. Tell us about your group and we'll set up the beds to fit.",
       },
       {
         q: "Are children welcome?",
