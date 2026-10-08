@@ -19,9 +19,11 @@ export default function Hero() {
       void video.play().catch(() => {})
     }
     play()
+    video.addEventListener("loadeddata", play)
     video.addEventListener("canplay", play)
     document.addEventListener("touchstart", play, { once: true })
     return () => {
+      video.removeEventListener("loadeddata", play)
       video.removeEventListener("canplay", play)
     }
   }, [])
