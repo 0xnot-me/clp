@@ -29,11 +29,24 @@ export const site = {
   ogImage: "/og-image.jpg",
 }
 
-export const rentalOptions = [
-  { bedrooms: 6, guests: "up to 12 guests", nightly: "$3,200" },
-  { bedrooms: 7, guests: "up to 14 guests", nightly: "$4,000" },
-  { bedrooms: 8, guests: "up to 16 guests", nightly: "$5,000" },
+export type Bedrooms = 6 | 7 | 8
+
+export const rentalOptions: { bedrooms: Bedrooms; maxGuests: number; nightly: number }[] = [
+  { bedrooms: 6, maxGuests: 12, nightly: 3200 },
+  { bedrooms: 7, maxGuests: 14, nightly: 4000 },
+  { bedrooms: 8, maxGuests: 16, nightly: 5000 },
 ]
+
+// Christmas: nights from Dec 24 through Dec 31 (check-out Jan 1). Easter: Palm Sunday through Holy Saturday.
+// Both are 8 bedrooms only; Christmas and New Year's also require a 7-night minimum.
+export const holidayRates = {
+  christmas: 7000,
+  easter: 5500,
+  christmasMinNights: 7,
+}
+
+export const usd = (n: number) =>
+  n.toLocaleString("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 })
 
 export const staff = [
   "Private chef (breakfast and lunch included)",

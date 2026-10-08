@@ -3,6 +3,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import Navbar from "./navbar"
+import { rentalOptions, usd } from "@/lib/site"
 
 export default function Hero() {
   return (
@@ -21,8 +22,13 @@ export default function Hero() {
 
       {/* Navigation */}
       <Navbar />
-      
-      
+
+      <Link
+        href="/rates#calculator"
+        className="absolute bottom-28 left-1/2 -translate-x-1/2 z-10 bg-white/90 hover:bg-white text-black px-6 py-3 text-sm font-semibold tracking-[0.15em] uppercase whitespace-nowrap"
+      >
+        Rates from {usd(rentalOptions[0].nightly)}/night
+      </Link>
 
       <div 
         onClick={() => {

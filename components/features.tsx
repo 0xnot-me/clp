@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import { site } from "@/lib/site"
+import { rentalOptions, site, usd } from "@/lib/site"
 
 export default function Features() {
   const features = [
@@ -47,9 +47,14 @@ export default function Features() {
             A superb study in elegant simplicity: 20,000 sq ft, 175 feet of beachfront, a private chef, and sleeping
             for up to 16 guests, just blocks from downtown Puerto Vallarta and a 10-minute walk to the Malecón.
           </p>
-          <Link href={site.telHref} className="inline-block bg-gray-900 text-white px-8 py-3 font-medium">
-            CALL US NOW!
-          </Link>
+          <div className="flex flex-col sm:flex-row justify-center gap-3">
+            <Link href="/rates#calculator" className="inline-block bg-gray-900 text-white px-8 py-3 font-medium">
+              SEE RATES: FROM {usd(rentalOptions[0].nightly)}/NIGHT
+            </Link>
+            <Link href={site.telHref} className="inline-block border border-gray-900 px-8 py-3 font-medium">
+              CALL US NOW!
+            </Link>
+          </div>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 mt-16">

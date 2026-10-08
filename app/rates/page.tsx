@@ -3,7 +3,8 @@ import Footer from "@/components/footer"
 import PageHeader from "@/components/page-header"
 import ContactForm from "@/components/contact-form"
 import { pageMetadata } from "@/lib/metadata"
-import { site } from "@/lib/site"
+import { holidayRates, rentalOptions, site, usd } from "@/lib/site"
+import RateCalculator from "@/components/rate-calculator"
 
 export const metadata = pageMetadata({
   title: "Casa La Playa Rates | 6–8 Bedroom Beachfront Villa, Puerto Vallarta",
@@ -26,74 +27,42 @@ export default function RatesPage() {
                   All rates include private access to Casa La Playa's luxury amenities and the villa's full-service staff to best accommodate you during your stay.
                 </p>
 
+                <RateCalculator />
+
                 <h2 className="text-2xl font-bold mb-4">Nightly Rates ($USD)</h2>
-                
-                {/* Desktop Table */}
-                <div className="hidden md:block">
-                  <table className="w-full border-collapse">
+                <div className="overflow-x-auto not-prose">
+                  <table className="w-full border-collapse text-left">
                     <thead>
                       <tr className="border-b">
-                        <th className="text-left py-3 px-4">Dates</th>
-                        <th className="text-left py-3 px-4">6 Bedroom <span className="font-normal text-gray-500">(up to 12 guests)</span></th>
-                        <th className="text-left py-3 px-4">7 Bedroom <span className="font-normal text-gray-500">(up to 14 guests)</span></th>
-                        <th className="text-left py-3 px-4">8 Bedroom <span className="font-normal text-gray-500">(up to 16 guests)</span></th>
+                        <th className="py-3 px-3">Dates</th>
+                        {rentalOptions.map((o) => (
+                          <th key={o.bedrooms} className="py-3 px-3">
+                            {o.bedrooms} Bedrooms <span className="block font-normal text-sm text-gray-500">up to {o.maxGuests} guests</span>
+                          </th>
+                        ))}
                       </tr>
                     </thead>
                     <tbody>
                       <tr className="border-b">
-                        <td className="py-3 px-4">May 1-Sept. 30</td>
-                        <td className="py-3 px-4">$3200</td>
-                        <td className="py-3 px-4">$4000</td>
-                        <td className="py-3 px-4">$5000</td>
+                        <td className="py-3 px-3">Year-round</td>
+                        {rentalOptions.map((o) => (
+                          <td key={o.bedrooms} className="py-3 px-3 font-medium">{usd(o.nightly)}</td>
+                        ))}
                       </tr>
                       <tr className="border-b">
-                        <td className="py-3 px-4">Oct. 1-Apr. 30</td>
-                        <td className="py-3 px-4">$3200</td>
-                        <td className="py-3 px-4">$4000</td>
-                        <td className="py-3 px-4">$5000</td>
+                        <td className="py-3 px-3">Christmas week <span className="block text-sm text-gray-500">Dec. 24 to Jan. 1</span></td>
+                        <td className="py-3 px-3 text-gray-400">N/A</td>
+                        <td className="py-3 px-3 text-gray-400">N/A</td>
+                        <td className="py-3 px-3 font-medium">{usd(holidayRates.christmas)}</td>
                       </tr>
                       <tr className="border-b">
-                        <td className="py-3 px-4">Christmas Week</td>
-                        <td className="py-3 px-4">N/A</td>
-                        <td className="py-3 px-4">N/A</td>
-                        <td className="py-3 px-4">$7000</td>
-                      </tr>
-                      <tr className="border-b">
-                        <td className="py-3 px-4">Easter Week</td>
-                        <td className="py-3 px-4">N/A</td>
-                        <td className="py-3 px-4">N/A</td>
-                        <td className="py-3 px-4">$5500</td>
+                        <td className="py-3 px-3">Easter week <span className="block text-sm text-gray-500">Palm Sunday to Easter Sunday</span></td>
+                        <td className="py-3 px-3 text-gray-400">N/A</td>
+                        <td className="py-3 px-3 text-gray-400">N/A</td>
+                        <td className="py-3 px-3 font-medium">{usd(holidayRates.easter)}</td>
                       </tr>
                     </tbody>
                   </table>
-                </div>
-
-                {/* Mobile Cards */}
-                <div className="md:hidden space-y-6">
-                  {[
-                    { period: "May 1-Sept. 30", six: "$3200", seven: "$4000", eight: "$5000" },
-                    { period: "Oct. 1-Apr. 30", six: "$3200", seven: "$4000", eight: "$5000" },
-                    { period: "Christmas Week", six: "N/A", seven: "N/A", eight: "$7000" },
-                    { period: "Easter Week", six: "N/A", seven: "N/A", eight: "$5500" }
-                  ].map((rate, index) => (
-                    <div key={index} className="bg-gray-50 rounded-lg p-4 shadow-sm">
-                      <div className="font-semibold text-lg mb-3">{rate.period}</div>
-                      <div className="space-y-2">
-                        <div className="flex justify-between">
-                          <span className="text-gray-600">6 Bedroom:</span>
-                          <span className="font-medium">{rate.six}</span>
-                        </div>
-                        <div className="flex justify-between">
-                          <span className="text-gray-600">7 Bedroom:</span>
-                          <span className="font-medium">{rate.seven}</span>
-                        </div>
-                        <div className="flex justify-between">
-                          <span className="text-gray-600">8 Bedroom:</span>
-                          <span className="font-medium">{rate.eight}</span>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
                 </div>
 
                 <p className="text-gray-600 text-sm mt-4">
