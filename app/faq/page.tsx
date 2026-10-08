@@ -37,7 +37,7 @@ const groups: { title: string; faqs: Faq[] }[] = [
       },
       {
         q: "How many guests does Casa La Playa sleep?",
-        a: "The full 8-bedroom house sleeps up to 16 guests. The 6-bedroom option sleeps up to 12 and the 7-bedroom option up to 14.",
+        a: "Casa La Playa is great for groups of 6 to 16. The full 8-bedroom house sleeps up to 16 guests, the 7-bedroom option up to 14 and the 6-bedroom option up to 12. Smaller group? During the off season we can occasionally work with you, so just ask.",
       },
       {
         q: "How many bedrooms and bathrooms are there?",
@@ -50,6 +50,10 @@ const groups: { title: string; faqs: Faq[] }[] = [
       {
         q: "Are children welcome?",
         a: "Yes, families are welcome. Just let us know how many adults and children are coming and their ages, so we can set up the right beds and have the staff and house ready for your kids, including around the pools.",
+      },
+      {
+        q: "Can our whole group eat together?",
+        a: "Yes. The dining table seats 16, so everyone can sit down to the chef's meals together.",
       },
       {
         q: "Does Casa La Playa have pools, air conditioning and Wi-Fi?",
@@ -66,7 +70,7 @@ const groups: { title: string; faqs: Faq[] }[] = [
     faqs: [
       {
         q: "What if my group is bigger than the house?",
-        a: "Believe it or not, people have a lot of friends! Friends who aren't staying at the house are welcome to come hang out for the day for a day fee, which compensates the staff for the extra work. We keep the numbers in check because too many people strains the experience for everyone. We can help you find hotels nearby for the rest of your friends, and if you have a really big group, we can help you find another home close by too.",
+        a: "Believe it or not, people have a lot of friends! Friends who aren't staying at the house are welcome to come hang out for the day for a day fee, which compensates the staff for the extra work. We keep the numbers in check because too many people strains the experience for everyone. We can help you find hotels nearby for the rest of your friends, and if you have a really big group, we can help you find another home close by too. Reach out and we'll walk you through how it works and the daily fees.",
       },
       {
         q: "Can we rent only part of the villa?",

@@ -52,7 +52,7 @@ export default function RatesPage() {
           <div className="md:col-span-2 min-w-0 space-y-12">
             <section>
               <h2 className="text-3xl font-black mb-1">Nightly Rates (USD)</h2>
-              <p className="text-lg text-gray-600 mb-6">Chef and full staff included. One group at a time.</p>
+              <p className="text-lg text-gray-600 mb-6">Great for groups of 6 to 16. Chef and full staff included. Smaller group? Ask about the off season.</p>
               <div className="grid sm:grid-cols-3 gap-4 sm:gap-6">
                 {rentalOptions.map((o, i) => (
                   <div key={o.bedrooms} className="rounded-xl border overflow-hidden flex sm:block">

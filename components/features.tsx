@@ -44,7 +44,7 @@ export default function Features() {
             Casa La Playa Puerto Vallarta: Private Beachfront Villa Rental on Playa Camarones
           </h1>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Rent 6, 7 or all 8 bedrooms. Private chef and staff included. On the sand, walking distance to everything.
+            Great for groups of 6 to 16. Private chef and staff included. On the sand, walking distance to everything.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-3">
             <Link href="/rates" className="inline-block bg-gray-900 text-white px-8 py-3 font-medium">
