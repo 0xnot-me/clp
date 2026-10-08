@@ -79,7 +79,7 @@ export default function FaqPage() {
       <PageHeader title="Frequently Asked Questions" />
       <div className="container mx-auto px-4 py-16">
         <div className="grid md:grid-cols-3 gap-12">
-          <div className="md:col-span-2 space-y-8">
+          <div className="md:col-span-2 min-w-0 space-y-8">
             {faqs.map(({ q, a }) => (
               <section key={q}>
                 <h2 className="text-2xl font-bold mb-2">{q}</h2>

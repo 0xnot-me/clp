@@ -21,7 +21,7 @@ export default function RatesPage() {
       <div className="min-h-[calc(100vh-400px)]">
         <div className="container mx-auto px-4 py-8 lg:py-16">
           <div className="grid md:grid-cols-3 gap-12">
-            <div className="md:col-span-2">
+            <div className="md:col-span-2 min-w-0">
               <div className="prose max-w-none">
                 <p className="text-lg italic mb-8">
                   All rates include private access to Casa La Playa's luxury amenities and the villa's full-service staff to best accommodate you during your stay.
@@ -30,7 +30,27 @@ export default function RatesPage() {
                 <RateCalculator />
 
                 <h2 className="text-2xl font-bold mb-4">Nightly Rates ($USD)</h2>
-                <div className="overflow-x-auto not-prose">
+                <div className="md:hidden not-prose space-y-3">
+                  {rentalOptions.map((o) => (
+                    <div key={o.bedrooms} className="rounded-lg border p-4">
+                      <div className="flex justify-between items-baseline">
+                        <h3 className="text-xl font-bold">{o.bedrooms === 8 ? "Full house (8 bedrooms)" : `${o.bedrooms} bedrooms`}</h3>
+                        <span className="text-gray-600">up to {o.maxGuests} guests</span>
+                      </div>
+                      <dl className="mt-2 space-y-1 text-lg">
+                        <div className="flex justify-between"><dt>Year-round</dt><dd className="font-semibold">{usd(o.nightly)}</dd></div>
+                        {o.bedrooms === 8 && (
+                          <>
+                            <div className="flex justify-between"><dt>Christmas week <span className="block text-sm text-gray-500">Dec. 24 to Jan. 1</span></dt><dd className="font-semibold">{usd(holidayRates.christmas)}</dd></div>
+                            <div className="flex justify-between"><dt>Easter week <span className="block text-sm text-gray-500">Palm Sunday to Easter Sunday</span></dt><dd className="font-semibold">{usd(holidayRates.easter)}</dd></div>
+                          </>
+                        )}
+                      </dl>
+                    </div>
+                  ))}
+                  <p className="text-gray-600">Christmas and Easter weeks are available for the full 8-bedroom house only.</p>
+                </div>
+                <div className="hidden md:block overflow-x-auto not-prose">
                   <table className="w-full border-collapse text-left">
                     <thead>
                       <tr className="border-b">
@@ -65,11 +85,11 @@ export default function RatesPage() {
                   </table>
                 </div>
 
-                <p className="text-gray-600 text-sm mt-4">
+                <p className="text-gray-600 text-base md:text-sm mt-4">
                   Note: Until confirmed, rates are subject to change without notice. The villa accommodates 16 guests maximum. The above rates include a full housekeeping staff and chef. Restrictions may apply. All rates are subject to 19% hotel and local taxes.
                 </p>
                 
-                <div className="space-y-1 mt-2 text-gray-600 text-sm font-bold">
+                <div className="space-y-1 mt-2 text-gray-600 text-base md:text-sm font-bold">
                   <p className="flex items-start">
                     <span className="mr-2">-</span>
                     <span>We only rent to ONE group at a time.</span>

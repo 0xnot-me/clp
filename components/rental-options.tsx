@@ -16,7 +16,7 @@ export default function RentalOptions() {
           Casa La Playa is a superb study in elegant simplicity set on the beach in a tropical paradise. Discover a world of barefoot sophistication while enjoying near-perfect weather and breathtaking sunsets everyday. The sophisticated architecture of this elegant estate serves to seamlessly connect indoor and outdoor living spaces. Enjoy private, unfettered beachfront views from every room and every floor of the stylish villa that is walking distance to Puerto Vallarta's most popular restaurants, shopping, and nightlife.
         </p>
 
-        <h2 className="text-5xl font-black text-center mb-4">Rental Options &amp; Rates</h2>
+        <h2 className="text-3xl md:text-5xl font-black text-center mb-4">Rental Options &amp; Rates</h2>
         <p className="text-center text-gray-600 mb-12">
           We rent to one group at a time. Every option includes a private chef for breakfast and lunch, daily
           housekeeping, a night watchman and concierge. Book direct with us and skip the 4–12% service fees

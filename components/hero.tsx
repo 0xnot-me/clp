@@ -30,14 +30,14 @@ export default function Hero() {
         <span className="block text-sm font-semibold tracking-[0.15em] uppercase">
           Rates from {usd(rentalOptions[0].nightly)}/night
         </span>
-        <span className="block text-xs tracking-wide">Book direct, no booking-site fees</span>
+        <span className="block text-sm tracking-wide">Book direct, no booking-site fees</span>
       </Link>
 
       <div 
         onClick={() => {
           document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' });
         }}
-        className="absolute bottom-8 md:left-[48%] left-[38%] -translate-x-1/2 z-10 text-white flex flex-col items-center justify-center gap-2 cursor-pointer animate-bounce hover:text-gray-200 transition-colors text-center"
+        className="absolute bottom-8 inset-x-0 mx-auto w-fit z-10 text-white flex flex-col items-center justify-center gap-2 cursor-pointer animate-bounce hover:text-gray-200 transition-colors text-center"
       >
         <span className="text-lg font-medium">Learn More</span>
         <svg 

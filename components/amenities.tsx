@@ -50,7 +50,7 @@ export default function Amenities() {
           </div>
           <TabsContent value="amenities" className="mt-8">
             <div className="grid md:grid-cols-2 gap-12">
-              <div className="space-y-4 pl-8">
+              <div className="space-y-4 md:pl-8">
                 {amenities.map((amenity, index) => (
                   <div key={index} className="flex items-center gap-3">
                     <svg 
@@ -60,14 +60,16 @@ export default function Amenities() {
                     >
                       <path d="M12 0L14 10L24 12L14 14L12 24L10 14L0 12L10 10L12 0Z" />
                     </svg>
-                    <span className="text-sm tracking-wide">{amenity}</span>
+                    <span className="text-base md:text-sm tracking-wide">{amenity}</span>
                   </div>
                 ))}
               </div>
-              <div className="relative h-full">
+              <div className="relative h-[560px] md:h-auto md:min-h-[480px]">
                 <div className="absolute inset-0 rounded-xl border border-gray-200 shadow-sm overflow-hidden">
                   <iframe
                     src="https://www.instagram.com/casalaplaya/embed"
+                    title="Casa La Playa on Instagram"
+                    loading="lazy"
                     className="w-full h-full"
                     frameBorder="0"
                     scrolling="no"
@@ -78,7 +80,7 @@ export default function Amenities() {
             </div>
           </TabsContent>
           <TabsContent value="location" className="mt-8">
-            <div className="relative h-[600px] w-full rounded-xl border border-gray-200 shadow-sm overflow-hidden">
+            <div className="relative h-[420px] md:h-[600px] w-full rounded-xl border border-gray-200 shadow-sm overflow-hidden">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3733.298!2d-105.233355!3d20.619901!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x84214544a598353f%3A0xc7abd8e0d203c778!2sCasa+La+Playa%2C+Puerto+Vallarta!5e0!3m2!1sen!2sus!4v1710284151824!5m2!1sen!2sus"
                 width="100%"
@@ -91,7 +93,7 @@ export default function Amenities() {
             </div>
           </TabsContent>
           <TabsContent value="video" className="mt-8">
-            <div className="relative h-[600px] w-full rounded-xl border border-gray-200 shadow-sm overflow-hidden">
+            <div className="relative h-[420px] md:h-[600px] w-full rounded-xl border border-gray-200 shadow-sm overflow-hidden">
               <iframe
                 src="https://www.youtube.com/embed/kJsu3WmaS8w"
                 width="100%"

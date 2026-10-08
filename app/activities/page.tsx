@@ -19,7 +19,7 @@ export default function ActivitiesPage() {
       <div className="min-h-[calc(100vh-400px)]">
         <div className="container mx-auto px-4 py-8 lg:py-16">
           <div className="grid md:grid-cols-3 gap-12">
-            <div className="md:col-span-2">
+            <div className="md:col-span-2 min-w-0">
               <div className="prose max-w-none">
                 <p className="text-lg leading-relaxed mb-8">
                   From shopping with local artisans in the downtown area to exploring Banderas Bay, Casa La 

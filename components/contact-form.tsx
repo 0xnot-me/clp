@@ -68,7 +68,7 @@ export default function ContactForm() {
             name="firstName"
             type="text"
             placeholder="First Name"
-            className="w-full px-4 py-2 border rounded"
+            className="w-full px-4 py-3 text-base border rounded bg-white"
             required
           />
         </div>
@@ -77,7 +77,7 @@ export default function ContactForm() {
             name="lastName"
             type="text"
             placeholder="Last Name"
-            className="w-full px-4 py-2 border rounded"
+            className="w-full px-4 py-3 text-base border rounded bg-white"
             required
           />
         </div>
@@ -86,7 +86,7 @@ export default function ContactForm() {
             name="email"
             type="email"
             placeholder="Email"
-            className="w-full px-4 py-2 border rounded"
+            className="w-full px-4 py-3 text-base border rounded bg-white"
             required
           />
         </div>
@@ -95,7 +95,7 @@ export default function ContactForm() {
             name="phone"
             type="tel"
             placeholder="Phone"
-            className="w-full px-4 py-2 border rounded"
+            className="w-full px-4 py-3 text-base border rounded bg-white"
             required
           />
         </div>
@@ -105,7 +105,7 @@ export default function ContactForm() {
             name="message"
             placeholder="Message: Dates and Reservation Details"
             rows={4}
-            className="w-full px-4 py-2 border rounded"
+            className="w-full px-4 py-3 text-base border rounded bg-white"
             required
           ></textarea>
         </div>

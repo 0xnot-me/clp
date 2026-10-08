@@ -6,7 +6,7 @@ interface PageHeaderProps {
 
 export default function PageHeader({ title }: PageHeaderProps) {
   return (
-    <div className="relative h-[40vh] min-h-[400px] w-full overflow-hidden">
+    <div className="relative h-[32vh] min-h-[240px] md:h-[40vh] md:min-h-[400px] w-full overflow-hidden">
       {/* Background Image */}
       <Image
         src="/footer-bg.jpg"

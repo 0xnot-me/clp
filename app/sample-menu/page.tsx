@@ -143,7 +143,7 @@ export default function SampleMenuPage() {
       <PageHeader title="Sample Menu" />
       <div className="container mx-auto px-4 py-16">
         <div className="grid md:grid-cols-3 gap-12">
-          <div className="md:col-span-2 space-y-10">
+          <div className="md:col-span-2 min-w-0 space-y-10">
             <p className="text-lg leading-relaxed">
               These sample menus are from Chef Wendy Galeana, Casa La Playa&apos;s chef in Puerto Vallarta. Breakfast
               and lunch chef service is included with every stay, and dinner can be added for a fee. Guests cover the

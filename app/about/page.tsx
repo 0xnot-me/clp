@@ -21,7 +21,7 @@ export default function AboutPage() {
       <div className="min-h-screen">
         <div className="container mx-auto px-4 py-16">
           <div className="grid md:grid-cols-3 gap-12">
-            <div className="md:col-span-2">
+            <div className="md:col-span-2 min-w-0">
               <FactSheet />
               <div className="prose max-w-none">
                 <div className="flex flex-col md:flex-row gap-6 mb-6">

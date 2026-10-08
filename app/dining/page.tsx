@@ -21,7 +21,7 @@ export default function DiningPage() {
       <div className="min-h-screen">
         <div className="container mx-auto px-4 py-16">
           <div className="grid md:grid-cols-3 gap-12">
-            <div className="md:col-span-2">
+            <div className="md:col-span-2 min-w-0">
               <div className="prose max-w-none">
                 <ul className="list-none p-0 mb-6">
                   <li className="text-lg mb-2">Complimentary Chef Service for Breakfast and Lunch</li>
@@ -31,7 +31,7 @@ export default function DiningPage() {
 
                 {/* First section with image and wrapped text */}
                 <div className="relative mb-8">
-                  <div className="float-left mr-6 mb-4 w-1/2">
+                  <div className="mb-4 w-full sm:float-left sm:mr-6 sm:w-1/2">
                     <Image
                       src="/dining.jpg"
                       alt="Mexican dishes prepared by the private chef at Casa La Playa"
@@ -58,7 +58,7 @@ export default function DiningPage() {
 
                 {/* Second section with image and wrapped text */}
                 <div className="relative mb-8 clear-both">
-                  <div className="float-right ml-6 mb-4 w-1/2">
+                  <div className="mb-4 w-full sm:float-right sm:ml-6 sm:w-1/2">
                     <Image
                       src="/marg.png"
                       alt="Margarita served poolside at Casa La Playa"

@@ -50,7 +50,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <p className="container mx-auto px-4 mt-8 text-xs text-white/50">
+      <p className="container mx-auto px-4 mt-8 text-sm text-white/60">
         © {new Date().getFullYear()} {site.brand}. All rights reserved.
       </p>
     </footer>
