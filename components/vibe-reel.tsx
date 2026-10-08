@@ -1,6 +1,8 @@
 import Image from "next/image"
 import Link from "next/link"
 import { Play } from "lucide-react"
+import { site } from "@/lib/site"
+import InstagramIcon from "./instagram-icon"
 
 const REEL_URL = "https://www.instagram.com/reel/C8pXy1IM-zt/"
 const REEL_CREATOR = "adventures_bysky"
@@ -16,10 +18,9 @@ export default function VibeReel() {
             Sunsets from the terrace, the pool steps from the sand, and your own staff taking care of everything.
             Travel creator @{REEL_CREATOR} called it &ldquo;the ultimate beachfront vacation home.&rdquo;
           </p>
+          <p className="text-lg font-semibold mt-4">Want to see what the house is really like? Check out our Instagram.</p>
           <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
-            <a href={REEL_URL} target="_blank" rel="noopener" className="inline-block bg-gray-900 text-white px-8 py-3 font-medium tracking-wide">
-              WATCH THE REEL
-            </a>
+            <InstagramButton />
             <Link href="/rates#quote" className="inline-block border border-gray-900 px-8 py-3 font-medium tracking-wide">
               GET YOUR QUOTE
             </Link>
@@ -54,6 +55,21 @@ export function ReelCard() {
         </span>
         <span className="text-lg font-semibold">Watch on Instagram</span>
       </span>
+    </a>
+  )
+}
+
+export function InstagramButton() {
+  return (
+    <a
+      href={site.instagram}
+      target="_blank"
+      rel="noopener"
+      aria-label="See @casalaplaya on Instagram"
+      className="inline-flex items-center justify-center gap-2 bg-gray-900 text-white px-8 py-3 font-medium tracking-wide whitespace-nowrap"
+    >
+      <InstagramIcon className="w-5 h-5" />
+      SEE OUR INSTAGRAM
     </a>
   )
 }

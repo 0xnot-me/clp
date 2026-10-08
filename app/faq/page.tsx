@@ -4,7 +4,7 @@ import PageHeader from "@/components/page-header"
 import ContactForm from "@/components/contact-form"
 import { JsonLd, faqSchema } from "@/components/json-ld"
 import { pageMetadata } from "@/lib/metadata"
-import { ReelCard } from "@/components/vibe-reel"
+import { InstagramButton, ReelCard } from "@/components/vibe-reel"
 
 export const metadata = pageMetadata({
   title: "Casa La Playa Puerto Vallarta FAQ | Rates, Chef, Food, Staff, Location",
@@ -175,6 +175,8 @@ export default function FaqPage() {
                           Watch a stay at Casa La Playa through the eyes of travel creator @adventures_bysky, who called
                           it &ldquo;the ultimate beachfront vacation home.&rdquo;
                         </p>
+                        <p className="text-lg font-semibold mt-4">Want to see what the house is really like? Check out our Instagram.</p>
+                        <div className="mt-4"><InstagramButton /></div>
                       </div>
                       <ReelCard />
                     </section>,
