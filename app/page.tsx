@@ -1,5 +1,6 @@
 import Hero from "@/components/hero"
 import Features from "@/components/features"
+import LocationHighlight from "@/components/location-highlight"
 import RentalOptions from "@/components/rental-options"
 import Amenities from "@/components/amenities"
 import Footer from "@/components/footer"
@@ -19,6 +20,7 @@ export default function Home() {
       <JsonLd data={vacationRentalSchema} />
       <Hero />
       <Features />
+      <LocationHighlight />
       <RentalOptions />
       <Amenities />
       <Footer />

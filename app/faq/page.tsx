@@ -19,6 +19,10 @@ const groups: { title: string; faqs: Faq[] }[] = [
     title: "The House and Location",
     faqs: [
       {
+        q: "What makes Casa La Playa different from other Puerto Vallarta villas?",
+        a: "Location. Casa La Playa is right on the beach and within walking distance of downtown Puerto Vallarta's restaurants, bars, nightclubs, art galleries, shopping and the Malecón, and it's only 15–20 minutes from the airport. Many villas are in the hills or far from town, where you need a car or taxi for everything. Here you walk out the door, and because we rent to one group at a time, you still have complete privacy when you stay in.",
+      },
+      {
         q: "Where is Casa La Playa in Puerto Vallarta?",
         a: "Casa La Playa is directly on Playa Camarones beach in Colonia 5 de Diciembre, on the north edge of downtown Puerto Vallarta, Jalisco, Mexico. It is not in Conchas Chinas, the Hotel Zone or Marina Vallarta.",
       },

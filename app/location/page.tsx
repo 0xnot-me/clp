@@ -26,6 +26,10 @@ export default function LocationPage() {
       <div className="pt-2 min-h-screen">
         <div className="container mx-auto px-4 py-16">
         <div className="prose max-w-none mb-12">
+            <h2 className="text-3xl font-black">Location, Location, Location</h2>
+            <p className="text-lg leading-relaxed">
+            The location is what makes Casa La Playa special. You&apos;re on the beach, and restaurants, bars, nightclubs, art galleries, shopping and activities are all within walking distance. Many Puerto Vallarta villas sit in the hills or far from town, where you need a car or taxi to do anything. Here you just walk out the door, and when you want to stay in, the whole villa is private to your group.
+            </p>
             <p className="text-lg leading-relaxed">
             Casa La Playa sits on the beautiful beachfront of Playa Camarones, just 15-20 minutes from Puerto Vallarta International Airport. This exclusive villa perfectly balances elegant simplicity with tropical paradise living in the heart of Puerto Vallarta. While guests enjoy a secluded beachfront setting, the vibrant Malecon boardwalk is less than a 10-minute walk away, offering easy access to the city's finest restaurants, boutique shopping, and nightlife.
             </p>
