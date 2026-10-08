@@ -45,6 +45,8 @@ export const holidayRates = {
   christmasMinNights: 7,
 }
 
+export const bookingSiteFeeRange = [0.04, 0.12] as const
+
 export const taxRate = 0.19
 export const taxLabel = "19% hotel and local taxes"
 

@@ -65,6 +65,10 @@ const faqs = [
     q: "How do I book Casa La Playa?",
     a: "Book directly with us by calling 310-986-2299, emailing info@casalaplaya.com or sending the inquiry form with your dates and group size. We'll confirm availability and rates.",
   },
+  {
+    q: "Is it cheaper to book Casa La Playa directly?",
+    a: "Yes. When you book directly with us there are no booking-site service fees, which typically add 4–12% on booking sites. It's the same house, the same staff and the same nightly rates.",
+  },
 ]
 
 export default function FaqPage() {

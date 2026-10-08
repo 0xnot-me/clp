@@ -21,7 +21,10 @@ export default function ContactPage() {
         <div className="container mx-auto px-4 py-16">
           <div className="grid md:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-2xl font-bold mb-4">Book Directly With Us</h2>
+              <h2 className="text-2xl font-bold mb-4">Book Direct and Save</h2>
+              <p className="text-lg mb-4">
+                Booking directly with us means no booking-site service fees, which typically add 4–12% to your stay.
+              </p>
               <p className="text-lg mb-6">
                 We&apos;re here to help plan your stay. Tell us your dates, how many guests and which bedroom option
                 you&apos;re considering (6, 7 or all 8 bedrooms), and we&apos;ll confirm availability and rates. We

@@ -19,7 +19,8 @@ export default function RentalOptions() {
         <h2 className="text-5xl font-black text-center mb-4">Rental Options &amp; Rates</h2>
         <p className="text-center text-gray-600 mb-12">
           We rent to one group at a time. Every option includes a private chef for breakfast and lunch, daily
-          housekeeping, a night watchman and concierge.
+          housekeeping, a night watchman and concierge. Book direct with us and skip the 4–12% service fees
+          booking sites charge.
         </p>
 
         <div className="grid md:grid-cols-3 gap-8">

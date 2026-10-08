@@ -1,7 +1,7 @@
 "use client"
 
 import { useMemo, useState } from "react"
-import { rentalOptions, site, taxLabel, taxRate, usd, type Bedrooms } from "@/lib/site"
+import { bookingSiteFeeRange, rentalOptions, site, taxLabel, taxRate, usd, type Bedrooms } from "@/lib/site"
 import { parseDate, quoteStay, suggestedBedrooms } from "@/lib/pricing"
 import { PREFILL_EVENT } from "./contact-form"
 
@@ -134,6 +134,11 @@ export default function RateCalculator() {
               <span className="font-semibold">Estimated total for {quote.nights} {quote.nights === 1 ? "night" : "nights"}, including taxes</span>
               <span className="text-3xl font-bold">{usd(quote.total)}</span>
             </div>
+            <p className="mt-3 rounded bg-green-50 border border-green-200 p-3 text-sm text-green-900">
+              <strong>Book direct and save:</strong> no booking-site service fees. Booking sites typically add{" "}
+              {bookingSiteFeeRange.map((r) => `${Math.round(r * 100)}%`).join("–")} on top, which would be another{" "}
+              {bookingSiteFeeRange.map((r) => usd(quote.subtotal * r)).join("–")} for these dates.
+            </p>
             {quote.notices.map((n) => (
               <p key={n} className="mt-3 text-sm text-amber-800">{n}</p>
             ))}
@@ -146,7 +151,8 @@ export default function RateCalculator() {
         )}
         {!quote && (
           <p className="mt-1 text-sm text-gray-600">
-            {usd(nightlyWithTax)} per night including {taxLabel}. Add your dates for a full total.
+            {usd(nightlyWithTax)} per night including {taxLabel}, with no booking-site fees when you book direct.
+            Add your dates for a full total.
           </p>
         )}
         {perGuest && !tooMany && (
