@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next/types";
 import localFont from "next/font/local";
 import "./globals.css";
 import Script from 'next/script';
+import { Analytics } from "@vercel/analytics/next";
 import { site } from "@/lib/site";
 
 const montserrat = localFont({
@@ -77,6 +78,7 @@ export default function RootLayout({
       </head>
       <body className={`${montserrat.variable} font-sans antialiased`}>
         {children}
+        <Analytics />
         <Script id="livechat" strategy="lazyOnload">
           {`
             window.__lc = window.__lc || {};
